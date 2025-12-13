@@ -1,4 +1,4 @@
-/* CONFIGURACIÓN BASE DE TAILWIND */
+/* CONFIGURACIÓN BASE DE TAILWIND (¡CRÍTICO!) */
 @layer base {
     :root {
         /* Colores Personalizados */
@@ -13,12 +13,11 @@
     }
 }
 
-/* ESTILOS PERSONALIZADOS (Pegados del <style> de index.html) */
+/* ESTILOS PERSONALIZADOS */
 html { scroll-behavior: smooth; }
 
 .hero-bg {
     /* Fondo de la sección principal */
-    background-color: var(--color-academic-primary);
     background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;

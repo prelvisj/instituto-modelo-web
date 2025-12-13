@@ -9,34 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        academic: {
-                            primary: '#0f172a',
-                            secondary: '#1e293b',
-                            accent: '#d97706',
-                            light: '#f8fafc',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Lato', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     </head>
 
 <body class="font-sans text-academic-primary bg-white antialiased">
+
+
     <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-2 group">
@@ -59,7 +41,7 @@
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden text-3xl text-academic-primary focus:outline-none">
-                <i class="ph ph-list" aria-label="Abrir menú"></i>
+                <i class="ph ph-list"></i>
             </button>
         </div>
 
