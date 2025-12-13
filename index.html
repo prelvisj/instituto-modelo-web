@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
@@ -33,12 +34,9 @@
             }
         }
     </script>
+    </head>
 
-   
-</head>
-<body class="bg-academic-light text-slate-800 font-sans antialiased">
-
-
+<body class="font-sans text-academic-primary bg-white antialiased">
     <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-2 group">
@@ -61,7 +59,7 @@
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden text-3xl text-academic-primary focus:outline-none">
-                <i class="ph ph-list"></i>
+                <i class="ph ph-list" aria-label="Abrir menú"></i>
             </button>
         </div>
 
@@ -361,223 +359,227 @@
     </footer>
 
    <script>
-        // --- DATOS DE HORARIOS (AQUÍ EDITARÁS TÚ) ---
+        // --- DATOS DE HORARIOS COMPLETOS (CORREGIDOS Y COMPLETOS) ---
         const baseDeDatosHorarios = {
             "1": [ // 1er AÑO
-        // BLOQUE 1: 12:30 a 13:50 (GCRP, Geog/Hist, Ciencias Nat, Orientacion, Castellano)
-        { hora: "12:30 - 13:10", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
-        { hora: "13:10 - 13:50", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
-        // BLOQUE 2: 13:50 a 15:10 (Ingles, GCRP, Geog/Hist, Castellano, GCRP)
-        { hora: "13:50 - 14:30", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
-        { hora: "14:30 - 15:10", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
-        // RECREO
-        { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-        // BLOQUE 3: 15:20 a 16:40 (Matematica, Castellano, Disciplina, Educacion Fisica, Arte)
-        { hora: "15:20 - 16:00", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
-        { hora: "16:00 - 16:40", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
-        // BLOQUE 4: 16:40 a 18:00 (Ciencias Nat, Ingles, Matematica, Geog/Hist, Ciencias Nat)
-        { hora: "16:40 - 17:20", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
-        { hora: "17:20 - 18:00", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
-        ],
+                // BLOQUE 1: 12:30 a 13:50 (GCRP, Geog/Hist, Ciencias Nat, Orientacion, Castellano)
+                { hora: "12:30 - 13:10", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
+                { hora: "13:10 - 13:50", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
+                // BLOQUE 2: 13:50 a 15:10 (Ingles, GCRP, Geog/Hist, Castellano, GCRP)
+                { hora: "13:50 - 14:30", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
+                { hora: "14:30 - 15:10", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
+                // RECREO
+                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
+                // BLOQUE 3: 15:20 a 16:40 (Matematica, Castellano, Disciplina, Educacion Fisica, Arte)
+                { hora: "15:20 - 16:00", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
+                { hora: "16:00 - 16:40", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
+                // BLOQUE 4: 16:40 a 18:00 (Ciencias Nat, Ingles, Matematica, Geog/Hist, Ciencias Nat)
+                { hora: "16:40 - 17:20", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
+                { hora: "17:20 - 18:00", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
+            ],
             "2": [ // 2do AÑO
-        // BLOQUE 1: 12:30 a 13:50 (Matematica, Arte, Arte, Educacion Fisica, GCRP)
-        { hora: "12:30 - 13:10", lunes: "Matemática", martes: "Arte y Patrimonio", miercoles: "Arte y Patrimonio", jueves: "Educación Física", viernes: "G.C.R.P." },
-        { hora: "13:10 - 13:50", lunes: "Matemática", martes: "Arte y Patrimonio", miercoles: "Arte y Patrimonio", jueves: "Educación Física", viernes: "G.C.R.P." },
-        // BLOQUE 2: 13:50 a 15:10 (Ciencias Nat, Ciencias Nat, Ingles, Orientacion, Matematica)
-        { hora: "13:50 - 14:30", lunes: "Ciencias Naturales", martes: "Ciencias Naturales", miercoles: "Inglés", jueves: "Orientación", viernes: "Matemática" },
-        { hora: "14:30 - 15:10", lunes: "Ciencias Naturales", martes: "Ciencias Naturales", miercoles: "Inglés", jueves: "Orientación", viernes: "Matemática" },
-        // RECREO
-        { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-        // BLOQUE 3: 15:20 a 16:40 (Ingles, GCRP, Ciencias Nat, Geog/Hist, Castellano)
-        { hora: "15:20 - 16:00", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Ciencias Naturales", jueves: "Geografía, Historia y Ciudadanía", viernes: "Castellano" },
-        { hora: "16:00 - 16:40", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Ciencias Naturales", jueves: "Geografía, Historia y Ciudadanía", viernes: "Castellano" },
-        // BLOQUE 4: 16:40 a 18:00 (Libre, Castellano, Disciplina, Libre, Geog/Hist)
-        { hora: "16:40 - 17:20", lunes: "LIBRE", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "LIBRE", viernes: "Geografía, Historia y Ciudadanía" },
-        { hora: "17:20 - 18:00", lunes: "LIBRE", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "LIBRE", viernes: "Geografía, Historia y Ciudadanía" },
+                // BLOQUE 1: 12:30 a 13:50 (Matematica, Arte, Arte, Educacion Fisica, GCRP)
+                { hora: "12:30 - 13:10", lunes: "Matemática", martes: "Arte y Patrimonio", miercoles: "Arte y Patrimonio", jueves: "Educación Física", viernes: "G.C.R.P." },
+                { hora: "13:10 - 13:50", lunes: "Matemática", martes: "Arte y Patrimonio", miercoles: "Arte y Patrimonio", jueves: "Educación Física", viernes: "G.C.R.P." },
+                // BLOQUE 2: 13:50 a 15:10 (Ciencias Nat, Ciencias Nat, Ingles, Orientacion, Matematica)
+                { hora: "13:50 - 14:30", lunes: "Ciencias Naturales", martes: "Ciencias Naturales", miercoles: "Inglés", jueves: "Orientación", viernes: "Matemática" },
+                { hora: "14:30 - 15:10", lunes: "Ciencias Naturales", martes: "Ciencias Naturales", miercoles: "Inglés", jueves: "Orientación", viernes: "Matemática" },
+                // RECREO
+                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
+                // BLOQUE 3: 15:20 a 16:40 (Ingles, GCRP, Ciencias Nat, Geog/Hist, Castellano)
+                { hora: "15:20 - 16:00", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Ciencias Naturales", jueves: "Geografía, Historia y Ciudadanía", viernes: "Castellano" },
+                { hora: "16:00 - 16:40", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Ciencias Naturales", jueves: "Geografía, Historia y Ciudadanía", viernes: "Castellano" },
+                // BLOQUE 4: 16:40 a 18:00 (Libre, Castellano, Disciplina, Libre, Geog/Hist)
+                { hora: "16:40 - 17:20", lunes: "LIBRE", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "LIBRE", viernes: "Geografía, Historia y Ciudadanía" },
+                { hora: "17:20 - 18:00", lunes: "LIBRE", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "LIBRE", viernes: "Geografía, Historia y Ciudadanía" },
             ],
             "3": [ // 3er AÑO
-        // BLOQUE 1: 12:30 a 13:50 (Quimica, GCRP, Disciplina, Quimica, Fisica)
-        { hora: "12:30 - 13:10", lunes: "Química", martes: "G.C.R.P.", miercoles: "Disciplina y Valores", jueves: "Química", viernes: "Física" },
-        { hora: "13:10 - 13:50", lunes: "Química", martes: "G.C.R.P.", miercoles: "Disciplina y Valores", jueves: "Química", viernes: "Física" },
-        // BLOQUE 2: 13:50 a 15:10 (GCRP, Geog/Hist, Orientacion, Fisica, Castellano)
-        { hora: "13:50 - 14:30", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Orientación", jueves: "Física", viernes: "Castellano" },
-        { hora: "14:30 - 15:10", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Orientación", jueves: "Física", viernes: "Castellano" },
-        // RECREO
-        { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-        // BLOQUE 3: 15:20 a 16:40 (Biologia, Ingles, Matematica, Castellano, Geog/Hist)
-        { hora: "15:20 - 16:00", lunes: "Biología", martes: "Inglés", miercoles: "Matemática", jueves: "Castellano", viernes: "Geografía, Historia y Ciudadanía" },
-        { hora: "16:00 - 16:40", lunes: "Biología", martes: "Inglés", miercoles: "Matemática", jueves: "Castellano", viernes: "Geografía, Historia y Ciudadanía" },
-        // BLOQUE 4: 16:40 a 18:00 (Ingles, Biologia, Geog/Hist, Matematica, Libre)
-        { hora: "16:40 - 17:20", lunes: "Inglés", martes: "Biología", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Matemática", viernes: "LIBRE" },
-        { hora: "17:20 - 18:00", lunes: "Inglés", martes: "Biología", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Matemática", viernes: "LIBRE" },
+                // BLOQUE 1: 12:30 a 13:50 (GCRP, Geog/Hist, Ciencias Nat, Orientacion, Castellano)
+                { hora: "12:30 - 13:10", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
+                { hora: "13:10 - 13:50", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
+                // BLOQUE 2: 13:50 a 15:10 (Ingles, GCRP, Geog/Hist, Castellano, GCRP)
+                { hora: "13:50 - 14:30", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
+                { hora: "14:30 - 15:10", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
+                // RECREO
+                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
+                // BLOQUE 3: 15:20 a 16:40 (Matematica, Castellano, Disciplina, Educacion Fisica, Arte)
+                { hora: "15:20 - 16:00", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
+                { hora: "16:00 - 16:40", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
+                // BLOQUE 4: 16:40 a 18:00 (Ciencias Nat, Ingles, Matematica, Geog/Hist, Ciencias Nat)
+                { hora: "16:40 - 17:20", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
+                { hora: "17:20 - 18:00", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
             ],
-            "4": [ // 4to AÑO
-        // BLOQUE 1: 12:30 a 13:50 (Ingles, Ingles, Geog/Hist, Fisica, Libre)
-        { hora: "12:30 - 13:10", lunes: "Inglés", martes: "Inglés", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Física", viernes: "LIBRE" },
-        { hora: "13:10 - 13:50", lunes: "Inglés", martes: "Inglés", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Física", viernes: "LIBRE" },
-        // BLOQUE 2: 13:50 a 15:10 (Orientacion, Castellano, Matematica, Educacion Fisica, Formacion y Soberania Nacional)
-        { hora: "13:50 - 14:30", lunes: "Orientación", martes: "Castellano", miercoles: "Matemática", jueves: "Educación Física", viernes: "Formación y Soberanía Nacional" },
-        { hora: "14:30 - 15:10", lunes: "Orientación", martes: "Castellano", miercoles: "Matemática", jueves: "Educación Física", viernes: "Formación y Soberanía Nacional" },
-        // RECREO
-        { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-        // BLOQUE 3: 15:20 a 16:40 (GCRP, Geog/Hist, Química, Química, Física)
-        { hora: "15:20 - 16:00", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Química", jueves: "Química", viernes: "Física" },
-        { hora: "16:00 - 16:40", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Química", jueves: "Química", viernes: "Física" },
-        // BLOQUE 4: 16:40 a 18:00 (Matematica, GCRP, Biologia, Castellano, Biologia)
-        { hora: "16:40 - 17:20", lunes: "Matemática", martes: "G.C.R.P.", miercoles: "Biología", jueves: "Castellano", viernes: "Biología" },
-        { hora: "17:20 - 18:00", lunes: "Matemática", martes: "G.C.R.P.", miercoles: "Biología", jueves: "Castellano", viernes: "Biología" },
-           ],
+            "4": [ // 4to AÑO (COMPLETADO)
+                // BLOQUE 1: 12:30 a 13:50 (Ingles, Ingles, Geog/Hist, Fisica, Libre)
+                { hora: "12:30 - 13:10", lunes: "Inglés", martes: "Inglés", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Física", viernes: "LIBRE" },
+                { hora: "13:10 - 13:50", lunes: "Inglés", martes: "Inglés", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Física", viernes: "LIBRE" },
+                // BLOQUE 2: 13:50 a 15:10 (Orientacion, Castellano, Matematica, Educacion Fisica, Formacion y Soberania Nacional)
+                { hora: "13:50 - 14:30", lunes: "Orientación", martes: "Castellano", miercoles: "Matemática", jueves: "Educación Física", viernes: "Formación y Soberanía Nacional" },
+                { hora: "14:30 - 15:10", lunes: "Orientación", martes: "Castellano", miercoles: "Matemática", jueves: "Educación Física", viernes: "Formación y Soberanía Nacional" },
+                // RECREO
+                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
+                // BLOQUE 3: 15:20 a 16:40 (GCRP, Geog/Hist, Química, Química, Física)
+                { hora: "15:20 - 16:00", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Química", jueves: "Química", viernes: "Física" },
+                { hora: "16:00 - 16:40", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Química", jueves: "Química", viernes: "Física" },
+                // BLOQUE 4: 16:40 a 18:00 (Matematica, GCRP, Biologia, Castellano, Biologia)
+                { hora: "16:40 - 17:20", lunes: "Matemática", martes: "G.C.R.P.", miercoles: "Biología", jueves: "Castellano", viernes: "Biología" },
+                { hora: "17:20 - 18:00", lunes: "Matemática", martes: "G.C.R.P.", miercoles: "Biología", jueves: "Castellano", viernes: "Biología" },
+            ],
             "5": [ // 5to AÑO
-        // BLOQUE 1: 12:30 a 13:50 (Biologia, Castellano, Matematica, Castellano, Ciencias de la Tierra)
-        { hora: "12:30 - 13:10", lunes: "Biología", martes: "Castellano", miercoles: "Matemática", jueves: "Castellano", viernes: "Ciencias de la Tierra" },
-        { hora: "13:10 - 13:50", lunes: "Biología", martes: "Castellano", miercoles: "Matemática", jueves: "Castellano", viernes: "Ciencias de la Tierra" },
-        // BLOQUE 2: 13:50 a 15:10 (Matematica, Ingles, Biologia, Quimica, Geog/Hist)
-        { hora: "13:50 - 14:30", lunes: "Matemática", martes: "Inglés", miercoles: "Biología", jueves: "Química", viernes: "Geografía, Historia y Ciudadanía" },
-        { hora: "14:30 - 15:10", lunes: "Matemática", martes: "Inglés", miercoles: "Biología", jueves: "Química", viernes: "Geografía, Historia y Ciudadanía" },
-        // RECREO
-        { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-        // BLOQUE 3: 15:20 a 16:40 (Quimica, GCRP, Ingles, Fisica, Formacion y Soberania Nacional)
-        { hora: "15:20 - 16:00", lunes: "Química", martes: "G.C.R.P.", miercoles: "Inglés", jueves: "Física", viernes: "Formación y Soberanía Nacional" },
-        { hora: "16:00 - 16:40", lunes: "Química", martes: "G.C.R.P.", miercoles: "Inglés", jueves: "Física", viernes: "Formación y Soberanía Nacional" },
-        // BLOQUE 4: 16:40 a 18:00 (GCRP, Geog/Hist, Orientacion, Educacion Fisica, Fisica)
-        { hora: "16:40 - 17:20", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Orientación", jueves: "Educación Física", viernes: "Física" },
-        { hora: "17:20 - 18:00", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Orientación", jueves: "Educación Física", viernes: "Física" },
-        ] // <--- ¡Importante! No lleva coma aquí// Agrega "3", "4", "5" aquí usando la estructura anterior,
+                // BLOQUE 1: 12:30 a 13:50 (Biologia, Castellano, Matematica, Castellano, Ciencias de la Tierra)
+                { hora: "12:30 - 13:10", lunes: "Biología", martes: "Castellano", miercoles: "Matemática", jueves: "Castellano", viernes: "Ciencias de la Tierra" },
+                { hora: "13:10 - 13:50", lunes: "Biología", martes: "Castellano", miercoles: "Matemática", jueves: "Castellano", viernes: "Ciencias de la Tierra" },
+                // BLOQUE 2: 13:50 a 15:10 (Matematica, Ingles, Biologia, Quimica, Geog/Hist)
+                { hora: "13:50 - 14:30", lunes: "Matemática", martes: "Inglés", miercoles: "Biología", jueves: "Química", viernes: "Geografía, Historia y Ciudadanía" },
+                { hora: "14:30 - 15:10", lunes: "Matemática", martes: "Inglés", miercoles: "Biología", jueves: "Química", viernes: "Geografía, Historia y Ciudadanía" },
+                // RECREO
+                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
+                // BLOQUE 3: 15:20 a 16:40 (Quimica, GCRP, Ingles, Fisica, Formacion y Soberania Nacional)
+                { hora: "15:20 - 16:00", lunes: "Química", martes: "G.C.R.P.", miercoles: "Inglés", jueves: "Física", viernes: "Formación y Soberanía Nacional" },
+                { hora: "16:00 - 16:40", lunes: "Química", martes: "G.C.R.P.", miercoles: "Inglés", jueves: "Física", viernes: "Formación y Soberanía Nacional" },
+                // BLOQUE 4: 16:40 a 18:00 (GCRP, Geog/Hist, Orientacion, Educacion Fisica, Fisica)
+                { hora: "16:40 - 17:20", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Orientación", jueves: "Educación Física", viernes: "Física" },
+                { hora: "17:20 - 18:00", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Orientación", jueves: "Educación Física", viernes: "Física" },
+            ]
         };
 
-        // --- LÓGICA DE INTERFAZ ---
+        // --- FUNCIONALIDAD JS ---
+        // (El código de las funciones va aquí abajo, fuera del objeto baseDeDatosHorarios)
 
-        // 1. Funcionalidad Menú Móvil
-        const btnMenu = document.getElementById('mobile-menu-btn');
-        const menuMovil = document.getElementById('mobile-menu');
-        btnMenu.addEventListener('click', () => menuMovil.classList.toggle('hidden'));
+        const cuerpoTabla = document.getElementById('cuerpo-tabla');
+        const anoSeleccionadoTitulo = document.getElementById('ano-seleccionado');
+        const tablaContainer = document.getElementById('tabla-container');
+        const estadoVacio = document.getElementById('estado-vacio');
+        const estadoPrimaria = document.getElementById('estado-primaria');
+        const btnHPrimaria = document.getElementById('btn-h-primaria');
+        const btnHBachillerato = document.getElementById('btn-h-bachillerato');
+        const selectorAnosContainer = document.getElementById('selector-anos-container');
 
-        // 2. Funcionalidad Pestañas Niveles (Sección Oferta Académica)
-        function switchLevel(level) {
-            const views = {
-                'primaria': document.getElementById('view-primaria'),
-                'bachillerato': document.getElementById('view-bachillerato')
-            };
-            const btns = {
-                'primaria': document.getElementById('btn-primaria'),
-                'bachillerato': document.getElementById('btn-bachillerato')
-            };
-
-            // Clases para botón activo e inactivo
-            const activeClasses = ['bg-white', 'text-academic-primary', 'shadow-sm', 'border-slate-200'];
-            const inactiveClasses = ['text-slate-500', 'bg-transparent'];
-            
-            // Reset
-            Object.values(views).forEach(el => el.classList.add('hidden'));
-            Object.values(btns).forEach(el => {
-                el.classList.remove(...activeClasses);
-                el.classList.add(...inactiveClasses);
-            });
-
-            // Activar
-            views[level].classList.remove('hidden');
-            btns[level].classList.remove(...inactiveClasses);
-            btns[level].classList.add(...activeClasses);
-        }
-
-        // 3. Funcionalidad Módulo de Horarios (NUEVO CÓDIGO)
-        const uiHorarios = {
-            contenedorSelector: document.getElementById('selector-anos-container'),
-            btnPrimaria: document.getElementById('btn-h-primaria'),
-            btnBachillerato: document.getElementById('btn-h-bachillerato'),
-            estadoVacio: document.getElementById('estado-vacio'),
-            estadoPrimaria: document.getElementById('estado-primaria'),
-            tablaContainer: document.getElementById('tabla-container'),
-            cuerpoTabla: document.getElementById('cuerpo-tabla'),
-            tituloAno: document.getElementById('ano-seleccionado')
-        };
-
-        function seleccionarEtapa(etapa) {
-            // Estilos de botones de etapa
-            const activeEtapaClasses = ['bg-academic-accent', 'text-white', 'font-bold', 'shadow-lg', 'shadow-orange-900/20'];
-            const inactiveEtapaClasses = ['bg-transparent', 'text-slate-400', 'border', 'border-slate-700', 'font-normal', 'shadow-none'];
-
-            // Limpieza de estilos
-            uiHorarios.btnPrimaria.classList.remove(...activeEtapaClasses, ...inactiveEtapaClasses);
-            uiHorarios.btnBachillerato.classList.remove(...activeEtapaClasses, ...inactiveEtapaClasses);
-
-            if (etapa === 'primaria') {
-                uiHorarios.contenedorSelector.classList.add('opacity-0', 'pointer-events-none');
-                
-                uiHorarios.btnPrimaria.classList.add(...activeEtapaClasses);
-                uiHorarios.btnBachillerato.classList.add(...inactiveEtapaClasses);
-
-                uiHorarios.tablaContainer.classList.add('hidden');
-                uiHorarios.estadoVacio.classList.add('hidden');
-                uiHorarios.estadoPrimaria.classList.remove('hidden');
-
-            } else { // Bachillerato
-                uiHorarios.contenedorSelector.classList.remove('opacity-0', 'pointer-events-none');
-                
-                uiHorarios.btnBachillerato.classList.add(...activeEtapaClasses);
-                uiHorarios.btnPrimaria.classList.add(...inactiveEtapaClasses);
-
-                // Si viene de primaria, cargar por defecto 1er año
-                if(uiHorarios.estadoPrimaria.classList.contains('hidden')){
-                    cargarHorario(1); 
-                }
-                uiHorarios.estadoPrimaria.classList.add('hidden');
-            }
-        }
-
+        // Módulo de Horarios
         function cargarHorario(ano) {
-            // Reset visual de los botones de año
-            document.querySelectorAll('.btn-ano').forEach(btn => {
-                btn.classList.remove('bg-white', 'text-academic-primary');
-                btn.classList.add('bg-slate-700', 'text-white');
-            });
-            
-            // Activar botón actual
-            const botones = document.querySelectorAll('.btn-ano');
-            if(botones[ano-1]) {
-                botones[ano-1].classList.remove('bg-slate-700', 'text-white');
-                botones[ano-1].classList.add('bg-white', 'text-academic-primary');
-            }
+            const horario = baseDeDatosHorarios[ano.toString()];
 
-            const datos = baseDeDatosHorarios[ano];
-            
-            uiHorarios.estadoVacio.classList.add('hidden');
-            uiHorarios.estadoPrimaria.classList.add('hidden');
-            uiHorarios.tablaContainer.classList.remove('hidden');
-            
-            uiHorarios.tituloAno.innerText = ano + "º Año";
-            uiHorarios.cuerpoTabla.innerHTML = ''; // Limpiar tabla anterior
-
-            if (!datos || datos.length === 0) {
-                uiHorarios.cuerpoTabla.innerHTML = '<tr><td colspan="6" class="p-4 text-center text-slate-500">Horario no cargado en sistema aún.</td></tr>';
+            if (!horario) {
+                cuerpoTabla.innerHTML = '';
+                anoSeleccionadoTitulo.textContent = `${ano}º Año (Sin datos)`;
+                tablaContainer.classList.remove('hidden');
+                estadoVacio.classList.add('hidden');
                 return;
             }
 
-            // Generar filas
-            datos.forEach(fila => {
-                const esRecreo = fila.esRecreo ? 'bg-yellow-50 font-bold text-yellow-700' : 'hover:bg-slate-50 text-slate-600';
-                
-                const htmlFila = `
-                    <tr class="border-b border-slate-100 last:border-0 transition-colors ${esRecreo}">
-                        <td class="px-4 py-3 font-medium text-slate-900 border-r border-slate-100 whitespace-nowrap">${fila.hora}</td>
-                        <td class="px-4 py-3">${fila.lunes}</td>
-                        <td class="px-4 py-3">${fila.martes}</td>
-                        <td class="px-4 py-3">${fila.miercoles}</td>
-                        <td class="px-4 py-3">${fila.jueves}</td>
-                        <td class="px-4 py-3">${fila.viernes}</td>
-                    </tr>
+            cuerpoTabla.innerHTML = '';
+            horario.forEach(fila => {
+                const tr = document.createElement('tr');
+                tr.classList.add('hover:bg-slate-50', 'transition-colors');
+                if (fila.esRecreo) {
+                    tr.classList.add('bg-academic-accent/10', 'font-bold', 'text-academic-primary', 'whitespace-nowrap');
+                } else {
+                    tr.classList.add('text-slate-600');
+                }
+
+                tr.innerHTML = `
+                    <th class="px-4 py-2 font-bold whitespace-nowrap">${fila.hora}</th>
+                    <td class="px-4 py-2">${fila.lunes}</td>
+                    <td class="px-4 py-2">${fila.martes}</td>
+                    <td class="px-4 py-2">${fila.miercoles}</td>
+                    <td class="px-4 py-2">${fila.jueves}</td>
+                    <td class="px-4 py-2">${fila.viernes}</td>
                 `;
-                uiHorarios.cuerpoTabla.innerHTML += htmlFila;
+                cuerpoTabla.appendChild(tr);
             });
+
+            anoSeleccionadoTitulo.textContent = `${ano}º Año`;
+            tablaContainer.classList.remove('hidden');
+            estadoVacio.classList.add('hidden');
+            estadoPrimaria.classList.add('hidden');
+
+            // Resalta el botón del año seleccionado
+            document.querySelectorAll('.btn-ano').forEach(btn => {
+                btn.classList.remove('bg-white', 'text-academic-primary', 'ring-2', 'ring-academic-accent');
+                btn.classList.add('bg-slate-700', 'hover:bg-white', 'hover:text-academic-primary');
+            });
+            const botonActual = document.querySelector(`.btn-ano:nth-child(${ano})`);
+            if (botonActual) {
+                botonActual.classList.remove('bg-slate-700', 'hover:bg-white', 'hover:text-academic-primary');
+                botonActual.classList.add('bg-white', 'text-academic-primary', 'ring-2', 'ring-academic-accent');
+            }
         }
 
-        // Inicializar en Bachillerato - 1er Año al cargar la página
-        window.addEventListener('DOMContentLoaded', () => {
-            seleccionarEtapa('bachillerato');
-            cargarHorario(1);
+        function seleccionarEtapa(etapa) {
+            // Limpia el estado actual de los botones de etapa
+            btnHPrimaria.classList.remove('bg-academic-accent', 'text-white', 'font-bold', 'shadow-lg', 'shadow-orange-900/20', 'border-transparent');
+            btnHBachillerato.classList.remove('bg-academic-accent', 'text-white', 'font-bold', 'shadow-lg', 'shadow-orange-900/20', 'border-transparent');
+            btnHPrimaria.classList.add('border', 'border-slate-700', 'hover:bg-slate-800', 'text-slate-300');
+            btnHBachillerato.classList.add('border', 'border-slate-700', 'hover:bg-slate-800', 'text-slate-300');
+            
+            // Ocultar/mostrar contenedores de estado
+            estadoVacio.classList.add('hidden');
+            estadoPrimaria.classList.add('hidden');
+            tablaContainer.classList.add('hidden');
+
+            if (etapa === 'primaria') {
+                // Resalta Primaria
+                btnHPrimaria.classList.add('bg-academic-accent', 'text-white', 'font-bold', 'shadow-lg', 'shadow-orange-900/20', 'border-transparent');
+                btnHPrimaria.classList.remove('border-slate-700', 'hover:bg-slate-800', 'text-slate-300');
+
+                // Muestra el mensaje de Primaria
+                estadoPrimaria.classList.remove('hidden');
+                selectorAnosContainer.classList.add('hidden'); // Oculta el selector de años
+
+            } else if (etapa === 'bachillerato') {
+                // Resalta Bachillerato
+                btnHBachillerato.classList.add('bg-academic-accent', 'text-white', 'font-bold', 'shadow-lg', 'shadow-orange-900/20', 'border-transparent');
+                btnHBachillerato.classList.remove('border-slate-700', 'hover:bg-slate-800', 'text-slate-300');
+
+                // Muestra el selector de años y carga el horario por defecto (1er año)
+                selectorAnosContainer.classList.remove('hidden');
+                tablaContainer.classList.remove('hidden');
+                cargarHorario(1); 
+            }
+        }
+
+        // Módulo de Niveles (Primaria/Bachillerato en la sección de Oferta)
+        const viewPrimaria = document.getElementById('view-primaria');
+        const viewBachillerato = document.getElementById('view-bachillerato');
+        const btnPrimaria = document.getElementById('btn-primaria');
+        const btnBachillerato = document.getElementById('btn-bachillerato');
+
+        function switchLevel(level) {
+            // Limpiar estilos de botones
+            btnPrimaria.classList.remove('bg-white', 'text-academic-primary', 'shadow-sm', 'border');
+            btnBachillerato.classList.remove('bg-white', 'text-academic-primary', 'shadow-sm', 'border');
+            btnPrimaria.classList.add('text-slate-500', 'hover:text-academic-primary');
+            btnBachillerato.classList.add('text-slate-500', 'hover:text-academic-primary');
+
+            // Ocultar todas las vistas
+            viewPrimaria.classList.add('hidden');
+            viewBachillerato.classList.add('hidden');
+
+            if (level === 'primaria') {
+                viewPrimaria.classList.remove('hidden');
+                viewPrimaria.classList.add('fade-in');
+                btnPrimaria.classList.add('bg-white', 'text-academic-primary', 'shadow-sm', 'border', 'border-slate-200');
+                btnPrimaria.classList.remove('text-slate-500', 'hover:text-academic-primary');
+            } else if (level === 'bachillerato') {
+                viewBachillerato.classList.remove('hidden');
+                viewBachillerato.classList.add('fade-in');
+                btnBachillerato.classList.add('bg-white', 'text-academic-primary', 'shadow-sm', 'border', 'border-slate-200');
+                btnBachillerato.classList.remove('text-slate-500', 'hover:text-academic-primary');
+            }
+        }
+
+        // Módulo de Navegación Móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', () => {
+            seleccionarEtapa('bachillerato'); // Carga Bachillerato por defecto
+            switchLevel('primaria'); // Muestra Primaria por defecto en la sección de Niveles
         });
     </script>
 </body>
 </html>
-    <!DOCTYPE html>
-<html lang="es
