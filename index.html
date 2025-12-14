@@ -17,714 +17,179 @@
 
 </head> <body> ```
 
-<body class="font-sans antialiased">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-
-    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-2 group">
-               <img src="img/logo.png" alt="Logo Instituto Modelo" class="h-10 w-auto">
-               <div>
-                   <h1 class="font-heading font-bold text-lg md:text-xl text-academic-primary leading-tight">UNIDAD EDUCATIVA<br>HIJOS DE LUZ</h1>
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="img/logo.png" alt="Logo U.E. Hijos de Luz" class="h-12 w-auto">
+                <div>
+                   <h1 class="font-bold text-xl text-academic-primary leading-tight">U.E. HIJOS DE LUZ</h1>
                </div>
             </a>
-
-            <nav class="hidden md:flex gap-8 items-center font-heading font-medium text-sm text-muted">
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
                 <a href="#inicio" class="hover:text-academic-accent transition-colors">Inicio</a>
-                <a href="#niveles" class="hover:text-academic-accent transition-colors">Oferta Académica</a>
-                <a href="#horarios" class="hover:text-academic-accent transition-colors">Horarios</a>
-                <a href="#noticias" class="hover:text-academic-accent transition-colors">Noticias</a>
-                <a href="#contacto" class="px-5 py-2.5 bg-academic-primary text-white rounded-full hover:bg-academic-accent transition-colors shadow-lg shadow-blue-900/20">
-                    Admisiones
+                <a href="#nosotros" class="hover:text-academic-accent transition-colors">Nosotros</a>
+                <a href="#niveles" class="hover:text-academic-accent transition-colors">Niveles</a>
+                <a href="#talleres" class="hover:text-academic-accent transition-colors">Talleres</a>
+                <a href="#contacto" class="bg-academic-primary text-white px-5 py-2.5 rounded-full hover:bg-academic-secondary transition-colors shadow-md">
+                    Contacto
                 </a>
             </nav>
-
-            <button id="mobile-menu-btn" class="md:hidden text-3xl text-academic-primary focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-3xl text-academic-primary">
                 <i class="ph ph-list"></i>
             </button>
         </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl">
-            <nav class="flex flex-col p-6 gap-4 font-heading font-medium text-muted text-center">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <nav class="flex flex-col p-4 gap-3 text-center">
                 <a href="#inicio" class="py-2 hover:text-academic-accent">Inicio</a>
-                <a href="#niveles" class="py-2 hover:text-academic-accent">Primaria y Bachillerato</a>
-                <a href="#horarios" class="py-2 hover:text-academic-accent">Consulta de Horarios</a>
-                <a href="#contacto" class="py-3 bg-academic-primary text-white rounded-lg">Contacto</a>
+                <a href="#nosotros" class="py-2 hover:text-academic-accent">Nosotros</a>
+                <a href="#niveles" class="py-2 hover:text-academic-accent">Niveles</a>
+                <a href="#talleres" class="py-2 hover:text-academic-accent">Talleres</a>
+                <a href="#contacto" class="py-2 bg-academic-primary text-white rounded-lg">Contacto</a>
             </nav>
         </div>
     </header>
 
-    <section id="inicio" class="hero-bg relative overflow-hidden">
-    <div class="relative z-10 text-center py-20 md:py-32 lg:py-48 max-w-4xl mx-auto">
-        <h2 class="text-4xl md:text-6xl font-heading font-extrabold text-white leading-tight mb-4">
-            Más que educación, formamos el futuro de <span class="text-academic-accent">Valencia.</span>
-        </h2>
-        <p class="text-xl md:text-2xl text-slate-200 mb-10">
-            Excelencia académica y valores que iluminan el camino de sus hijos desde el año 2000.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#niveles" class="bg-academic-accent hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
-                Conoce Nuestra Propuesta
-            </a>
-            <a href="#contacto" class="bg-white hover:bg-bg-main text-academic-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
-                Admisiones
-            </a>
-        </div>
-    </div>
-    </section>
-    
-    <section id="quienes-somos" class="py-20 px-6">
-    <div class="container mx-auto">
-        <h3 class="text-center text-3xl md:text-4xl font-heading font-bold text-academic-primary mb-16">
-            Unidad Educativa Hijos de Luz: 25 Años de Trayectoria
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-            <div class="md:order-2">
-                <img src="https://images.unsplash.com/photo-1558236712-cb477a16b280?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fachada de la escuela" class="rounded-xl shadow-2xl h-96 w-full object-cover">
-            </div>
-            <div class="md:order-1">
-                <p class="text-lg text-muted leading-relaxed mb-6">
-                    Fundada con el inicio del nuevo milenio, la Unidad Educativa Hijos de Luz nació con una vocación clara: ser un faro de conocimiento y valores en el estado Carabobo.
-                </p>
-                <p class="text-lg text-muted leading-relaxed">
-                    A lo largo de más de dos décadas, hemos evolucionado de ser un centro educativo a convertirnos en una verdadera familia institucional. Entendemos la educación no solo como la transmisión de datos, sino como el acto de **"encender" el potencial** de cada niño y joven.
-                </p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-            <div class="p-8 bg-white rounded-xl shadow-lg border-t-4 border-academic-accent">
-                <i class="ph ph-target text-4xl text-academic-accent mb-4"></i>
-                <h4 class="font-heading font-bold text-xl text-academic-primary mb-3">Nuestra Misión</h4>
-                <p class="text-muted">
-                    Brindar una educación integral de calidad que combine la exigencia académica con la formación del carácter. Trabajamos día a día para que cada estudiante descubra sus talentos en un ambiente de respeto, disciplina y amor por el conocimiento.
-                </p>
-            </div>
-            <div class="p-8 bg-white rounded-xl shadow-lg border-t-4 border-academic-accent">
-                <i class="ph ph-eye text-4xl text-academic-accent mb-4"></i>
-                <h4 class="font-heading font-bold text-xl text-academic-primary mb-3">Nuestra Visión</h4>
-                <p class="text-muted">
-                    Ser la institución educativa referente en Valencia por nuestro modelo humanista y de vanguardia, donde egresan líderes íntegros capaces de ser "luz" y generar un impacto positivo en la sociedad venezolana.
-                </p>
-            </div>
-        </div>
-
-        <h4 class="text-center text-2xl font-heading font-bold text-academic-primary mb-10">Nuestros Pilares Educativos</h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            
-            <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
-                <i class="ph ph-heartbeat text-4xl text-academic-accent mb-3"></i>
-                <p class="font-bold text-academic-primary">Integridad y Valores</p>
-                <p class="text-sm text-muted mt-1">Fomentamos principios morales sólidos que guían el comportamiento.</p>
-            </div>
-            
-            <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
-                <i class="ph ph-rocket-launch text-4xl text-academic-accent mb-3"></i>
-                <p class="font-bold text-academic-primary">Excelencia Académica</p>
-                <p class="text-sm text-muted mt-1">Equipo docente comprometido y en constante actualización pedagógica.</p>
-            </div>
-            
-            <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
-                <i class="ph ph-users-three text-4xl text-academic-accent mb-3"></i>
-                <p class="font-bold text-academic-primary">Comunidad Unida</p>
-                <p class="text-sm text-muted mt-1">Padres, maestros y alumnos trabajando juntos en un entorno seguro.</p>
-            </div>
-            
-            <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
-                <i class="ph ph-path text-4xl text-academic-accent mb-3"></i>
-                <p class="font-bold text-academic-primary">Continuidad Educativa</p>
-                <p class="text-sm text-muted mt-1">Acompañamos a su hijo desde Preescolar hasta Media General.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <section id="niveles" class="py-20 px-6 bg-white">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="font-heading text-3xl md:text-4xl font-bold text-academic-primary mb-4">Nuestros Niveles Educativos</h2>
-                <div class="h-1 w-24 bg-academic-accent mx-auto rounded-full mb-6"></div>
-                
-                <div class="inline-flex bg-bg-main p-1 rounded-full gap-1 mb-8">
-                    <button onclick="switchLevel('primaria')" id="btn-primaria" class="px-6 py-2 rounded-full text-sm font-bold transition-all bg-white text-academic-primary shadow-sm border border-slate-200">
-                        Educación Primaria
-                    </button>
-                    <button onclick="switchLevel('bachillerato')" id="btn-bachillerato" class="px-6 py-2 rounded-full text-sm font-bold transition-all text-muted hover:text-academic-primary">
-                        Bachillerato
-                    </button>
-                </div>
-            </div>
-
-            <div id="view-primaria" class="fade-in">
-                <div class="mb-6 text-center text-muted italic">De 1.º Grado a 6.º Grado: Formando las bases.</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">1º</div>
-                            <h3 class="font-heading font-bold text-lg text-slate-700">Primer Grado</h3>
-                        </div>
-                        <p class="text-muted text-sm">Inicio de la lectoescritura y pensamiento lógico básico.</p>
-                    </article>
-                    <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">2º</div>
-                            <h3 class="font-heading font-bold text-lg text-slate-700">Segundo Grado</h3>
-                        </div>
-                        <p class="text-muted text-sm">Consolidación de la lectura y operaciones matemáticas básicas.</p>
-                    </article>
-                     <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">3º</div>
-                            <h3 class="font-heading font-bold text-lg text-slate-700">Tercer Grado</h3>
-                        </div>
-                        <p class="text-muted text-sm">Expansión del vocabulario y conocimiento del entorno.</p>
-                    </article>
-                     <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">4º</div>
-                            <h3 class="font-heading font-bold text-lg text-slate-700">Cuarto Grado</h3>
-                        </div>
-                        <p class="text-muted text-sm">Desarrollo de habilidades de investigación y trabajo en equipo.</p>
-                    </article>
-                     <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">5º</div>
-                            <h3 class="font-heading font-bold text-lg text-slate-700">Quinto Grado</h3>
-                        </div>
-                        <p class="text-muted text-sm">Profundización en matemáticas y ciencias sociales.</p>
-                    </article>
-                     <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">6º</div>
-                            <h3 class="font-heading font-bold text-lg text-slate-700">Sexto Grado</h3>
-                        </div>
-                        <p class="text-muted text-sm">Preparación para el nivel medio y autonomía estudiantil.</p>
-                    </article>
-                </div>
-            </div>
-
-            <div id="view-bachillerato" class="hidden fade-in">
-                <div class="mb-6 text-center text-muted italic">De 1.º Año a 5.º Año: Rumbo a la Universidad.</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-heading text-xl font-bold text-academic-primary">1.º Año</h3>
-                            <i class="ph ph-atom text-2xl text-academic-accent"></i>
-                        </div>
-                        <p class="text-muted text-sm mb-4">Transición a la secundaria. Enfoque en adaptación y bases científicas.</p>
-                    </article>
-
-                    <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-heading text-xl font-bold text-academic-primary">2.º Año</h3>
-                            <i class="ph ph-calculator text-2xl text-academic-accent"></i>
-                        </div>
-                        <p class="text-muted text-sm mb-4">Desarrollo de pensamiento lógico-matemático y expresión verbal.</p>
-                    </article>
-
-                    <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-heading text-xl font-bold text-academic-primary">3.º Año</h3>
-                            <i class="ph ph-flask text-2xl text-academic-accent"></i>
-                        </div>
-                        <p class="text-muted text-sm mb-4">Introducción a Física y Química. Proyectos investigativos.</p>
-                    </article>
-
-                    <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-heading text-xl font-bold text-academic-primary">4.º Año</h3>
-                            <i class="ph ph-compass text-2xl text-academic-accent"></i>
-                        </div>
-                        <p class="text-muted text-sm mb-4">Ciclo Diversificado. Preparación pre-universitaria.</p>
-                    </article>
-
-                    <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-heading text-xl font-bold text-academic-primary">5.º Año</h3>
-                            <i class="ph ph-student text-2xl text-academic-accent"></i>
-                        </div>
-                        <p class="text-muted text-sm mb-4">Proyecto de grado y culminación del bachillerato.</p>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-<section id="horarios" class="py-20 px-6 bg-bg-main">
-    <div class="container mx-auto">
-        <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[500px]">
-            
-            <div class="md:w-1/3 bg-academic-primary p-8 text-white flex flex-col">
-                <div class="mb-8">
-                    <i class="ph ph-clock text-4xl text-academic-accent mb-2"></i>
-                    <h2 class="font-heading text-2xl font-bold">Horarios de Clases</h2>
-                    <p class="text-muted text-sm mt-2">Consulta la distribución académica semanal.</p>
-                </div>
-
-                <div class="mb-6">
-                    <label class="text-xs font-bold uppercase tracking-widest text-muted mb-2 block">1. Selecciona Etapa</label>
-                    <div class="flex flex-col gap-2">
-                        <button onclick="seleccionarEtapa('primaria')" id="btn-h-primaria" class="text-left px-4 py-3 rounded-lg border border-slate-700 hover:bg-slate-800 transition-colors flex justify-between items-center group">
-                            <span>Primaria (1º - 6º)</span>
-                            <i class="ph ph-caret-right text-muted group-hover:text-academic-accent"></i>
-                        </button>
-                        <button onclick="seleccionarEtapa('bachillerato')" id="btn-h-bachillerato" class="text-left px-4 py-3 rounded-lg bg-academic-accent text-white font-bold shadow-lg shadow-orange-900/20 flex justify-between items-center">
-                            <span>Bachillerato (1º - 5º)</span>
-                            <i class="ph ph-check-circle text-white"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div id="selector-anos-container" class="transition-all duration-300">
-                    <label class="text-xs font-bold uppercase tracking-widest text-muted mb-2 block">2. Selecciona Año</label>
-                    <div class="grid grid-cols-5 gap-1">
-                        <button onclick="cargarHorario(1)" class="btn-ano aspect-square rounded bg-slate-700 hover:bg-white hover:text-academic-primary font-bold text-sm transition-all focus:bg-white focus:text-academic-primary focus:ring-2 focus:ring-academic-accent">1º</button>
-                        <button onclick="cargarHorario(2)" class="btn-ano aspect-square rounded bg-slate-700 hover:bg-white hover:text-academic-primary font-bold text-sm transition-all focus:bg-white focus:text-academic-primary focus:ring-2 focus:ring-academic-accent">2º</button>
-                        <button onclick="cargarHorario(3)" class="btn-ano aspect-square rounded bg-slate-700 hover:bg-white hover:text-academic-primary font-bold text-sm transition-all focus:bg-white focus:text-academic-primary focus:ring-2 focus:ring-academic-accent">3º</button>
-                        <button onclick="cargarHorario(4)" class="btn-ano aspect-square rounded bg-slate-700 hover:bg-white hover:text-academic-primary font-bold text-sm transition-all focus:bg-white focus:text-academic-primary focus:ring-2 focus:ring-academic-accent">4º</button>
-                        <button onclick="cargarHorario(5)" class="btn-ano aspect-square rounded bg-slate-700 hover:bg-white hover:text-academic-primary font-bold text-sm transition-all focus:bg-white focus:text-academic-primary focus:ring-2 focus:ring-academic-accent">5º</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="md:w-2/3 p-6 md:p-10 bg-white relative overflow-x-auto">
-                
-                <div id="estado-vacio" class="hidden h-full flex flex-col items-center justify-center text-center text-muted">
-                    <i class="ph ph-chalkboard-teacher text-6xl mb-4 text-slate-300"></i>
-                    <p class="text-lg">Selecciona un año para ver el horario.</p>
-                </div>
-
-                <div id="estado-primaria" class="hidden h-full flex flex-col items-center justify-center text-center">
-                    <div class="bg-blue-50 p-6 rounded-full mb-4">
-                        <i class="ph ph-info text-4xl text-blue-500"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-bold text-academic-primary mb-4">...</h3>
-                    <p class="text-muted max-w-sm">Los horarios de primaria se gestionan directamente con la coordinación docente. Por favor, acérquese a dirección.</p>
-                </div>
-
-                <div id="tabla-container" class="">
-                    <h3 id="titulo-horario" class="text-xl font-bold text-academic-primary mb-6 flex items-center gap-2">
-                        <span class="w-2 h-8 bg-academic-accent rounded-full"></span>
-                        Horario de <span id="ano-seleccionado">1er Año</span>
-                    </h3>
-                    
-                    <div class="overflow-hidden rounded-lg border border-slate-200 shadow-sm bg-white">
-                        <table class="w-full text-sm text-left">
-                            <thead class="text-xs text-muted uppercase bg-bg-main border-b border-slate-200">
-                                <tr>
-                                    <th class="px-4 py-3 font-bold">Hora</th>
-                                    <th class="px-4 py-3 text-academic-primary">Lunes</th>
-                                    <th class="px-4 py-3 text-academic-primary">Martes</th>
-                                    <th class="px-4 py-3 text-academic-primary">Miércoles</th>
-                                    <th class="px-4 py-3 text-academic-primary">Jueves</th>
-                                    <th class="px-4 py-3 text-academic-primary">Viernes</th>
-                                </tr>
-                            </thead>
-                            <tbody id="cuerpo-tabla" class="divide-y divide-slate-100">
-                                </tbody>
-                        </table>
-                    </div>
-                    <div class="mt-4 flex items-center gap-2 text-xs text-muted">
-                        <i class="ph ph-printer"></i>
-                        <a href="#" class="hover:underline hover:text-academic-accent">Descargar versión PDF</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="noticias" class="py-20 px-6 bg-white">
-    <div class="container mx-auto">
-        <h2 class="text-center text-3xl md:text-4xl font-heading font-extrabold text-academic-primary mb-12">
-            Noticias y Momentos Destacados
-        </h2>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white p-6 md:p-10 rounded-xl shadow-2xl border-t-4 border-academic-accent">
-            
-            <div>
-                <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-xl">
-                    <a 
-                        href="https://www.youtube.com/watch?v=5TpT0xl1WW0" 
-                        target="_blank" 
-                        class="relative block w-full aspect-video rounded-lg overflow-hidden shadow-xl group"
-                        title="Ver Acto de Graduación en YouTube"
-                    >
-                        <img 
-                            src="https://img.youtube.com/vi/5TpT0xl1WW0/maxresdefault.jpg" 
-                            alt="Vista previa del Acto de Graduación" 
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        >
-                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all">
-                            <i class="ph ph-play-circle text-7xl text-white opacity-80 group-hover:opacity-100 transition-opacity"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
-            <div>
-                <span class="inline-block bg-academic-accent text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-                    EVENTO DESTACADO
-                </span>
-                <h3 class="text-3xl font-heading font-bold text-academic-primary mb-4">
-                    Acto de Graduación Promo 2024
-                </h3>
-                <p class="text-muted mb-6 leading-relaxed">
-                    Un momento inolvidable que marca la culminación de los estudios de nuestros bachilleres. La solemne ceremonia se llevó a cabo en el Anfiteatro de Bárbula de la Universidad de Carabobo, celebrando el éxito y el futuro de una nueva generación.
-                </p>
-                <ul class="space-y-2 text-slate-700">
-                    <li class="flex items-center gap-2"><i class="ph ph-calendar-blank text-xl text-academic-accent"></i> **Fecha:** [Inserta Fecha Real del Acto]</li>
-                    <li class="flex items-center gap-2"><i class="ph ph-map-pin text-xl text-academic-accent"></i> **Lugar:** Anfiteatro de Bárbula, UC.</li>
-                    <li class="flex items-center gap-2"><i class="ph ph-monitor text-xl text-academic-accent"></i> **Transmisión:** Evento completo en el video.</li>
-                </ul>
-
-                <a href="#contacto" class="mt-8 inline-block bg-academic-primary hover:bg-academic-secondary text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                    Únete a Nuestra Familia
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-white text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 59, 109, 0.7), rgba(0, 59, 109, 0.7)), url('https://placehold.co/1920x1080/003B6D/FFFFFF?text=Bienvenidos');">
+            <div class="z-10 p-6">
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Formando Líderes del Mañana</h2>
+                <p class="text-lg md:text-xl text-gray-200 mb-8">Educación de calidad con valores para un futuro brillante.</p>
+                <a href="#niveles" class="bg-academic-accent hover:bg-yellow-500 text-academic-secondary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                    Nuestra Oferta Educativa
                 </a>
             </div>
-        </div>
-        </div>
-</section>
+        </section>
 
-<section id="noticias" class="py-20 px-6 bg-white">
-    <div class="container mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="font-heading text-3xl md:text-4xl font-bold text-academic-primary mb-4">Eventos y Noticias Recientes</h2>
-            <div class="h-1 w-24 bg-academic-accent mx-auto rounded-full mb-4"></div>
-            <p class="text-muted max-w-2xl mx-auto">
-                Mantente al día con las actividades, logros estudiantiles y comunicados oficiales del instituto.
-            </p>
-        </div>
+        <!-- Sobre Nosotros -->
+        <section id="nosotros" class="py-20 px-6">
+            <div class="container mx-auto text-center max-w-4xl">
+                <h3 class="text-3xl md:text-4xl font-bold text-academic-primary mb-6">Un Faro de Conocimiento y Valores</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Desde nuestra fundación, en la U.E. Hijos de Luz nos hemos dedicado a ofrecer una educación integral que no solo se enfoca en la excelencia académica, sino también en la formación del carácter, el fomento de la creatividad y el desarrollo de un pensamiento crítico en un ambiente de respeto y comunidad.
+                </p>
+            </div>
+        </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <article class="bg-white rounded-xl shadow-lg overflow-hidden border border-slate-100 hover:shadow-xl transition-all">
-                <img src="https://images.unsplash.com/photo-1510531704581-5b57e49cb166?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Estudiantes en el pasillo" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <span class="text-xs font-bold uppercase text-academic-accent">Administrativo</span>
-                    <h3 class="font-heading text-xl font-bold text-academic-primary mt-2 mb-3">Inicio de Proceso de Inscripción 2026</h3>
-                    <p class="text-muted text-sm mb-4">La Dirección anuncia la apertura del proceso de admisiones para todos los niveles académicos.</p>
-                    <a href="#" class="text-academic-primary font-bold text-sm hover:text-academic-accent transition-colors">Leer más &rarr;</a>
+        <!-- Niveles Educativos -->
+        <section id="niveles" class="py-20 px-6 bg-gray-100">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-academic-primary mb-4">Niveles Educativos</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Acompañamos a nuestros estudiantes en cada etapa crucial de su desarrollo intelectual y personal.</p>
                 </div>
-            </article>
-
-            <article class="bg-white rounded-xl shadow-lg overflow-hidden border border-slate-100 hover:shadow-xl transition-all">
-                <img src="https://images.unsplash.com/photo-1541339907198-e0875661f970?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Estudiantes celebrando" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <span class="text-xs font-bold uppercase text-green-600">Logros</span>
-                    <h3 class="font-heading text-xl font-bold text-academic-primary mt-2 mb-3">Equipo de Química gana el Premio Nacional</h3>
-                    <p class="text-muted text-sm mb-4">Felicidades a los estudiantes de 5º año por su destacada participación y triunfo.</p>
-                    <a href="#" class="text-academic-primary font-bold text-sm hover:text-academic-accent transition-colors">Leer más &rarr;</a>
+                <div class="card-container">
+                    <!-- Card Inicial -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/F7C844/003B6D?text=Educación+Inicial" alt="Educación Inicial" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Educación Inicial</h3>
+                            <p class="card-text">Una base sólida para el futuro, donde los más pequeños exploran, juegan y aprenden en un entorno seguro y estimulante.</p>
+                        </div>
+                    </div>
+                    <!-- Card Primaria -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/005A9C/FFFFFF?text=Educación+Primaria" alt="Educación Primaria" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Educación Primaria</h3>
+                            <p class="card-text">Fomentamos la curiosidad y el conocimiento, desarrollando habilidades fundamentales en lectura, escritura y matemáticas.</p>
+                        </div>
+                    </div>
+                    <!-- Card Secundaria -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/003B6D/F7C844?text=Educación+Secundaria" alt="Educación Secundaria" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Educación Secundaria</h3>
+                            <p class="card-text">Preparamos a los jóvenes para los desafíos del futuro, con un currículo riguroso y una sólida orientación vocacional.</p>
+                        </div>
+                    </div>
                 </div>
-            </article>
+            </div>
+        </section>
 
-            <article class="bg-white rounded-xl shadow-lg overflow-hidden border border-slate-100 hover:shadow-xl transition-all">
-                <img src="https://images.unsplash.com/photo-1521743818318-63953d1000f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Teatro escolar" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <span class="text-xs font-bold uppercase text-blue-600">Eventos</span>
-                    <h3 class="font-heading text-xl font-bold text-academic-primary mt-2 mb-3">Festival de Artes y Talentos 2025</h3>
-                    <p class="text-muted text-sm mb-4">Invitación a padres y representantes al evento cultural de fin de semestre.</p>
-                    <a href="#" class="text-academic-primary font-bold text-sm hover:text-academic-accent transition-colors">Leer más &rarr;</a>
+        <!-- Talleres Section -->
+        <section id="talleres" class="py-20 px-6">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-academic-primary mb-4">Talleres Extracurriculares</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Potenciamos los talentos y pasiones de nuestros estudiantes más allá del aula.</p>
                 </div>
-            </article>
-        </div>
-    </div>
-</section>
+                <div class="card-container">
+                    <!-- Card Taller 1 -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/4CAF50/FFFFFF?text=Club+de+Ciencias" alt="Club de Ciencias" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Club de Ciencias</h3>
+                            <p class="card-text">Experimentación, descubrimiento y amor por la ciencia a través de proyectos prácticos y divertidos.</p>
+                        </div>
+                    </div>
+                    <!-- Card Taller 2 -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/E91E63/FFFFFF?text=Artes+Plásticas" alt="Artes Plásticas" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Artes Plásticas</h3>
+                            <p class="card-text">Un espacio para la creatividad, donde los estudiantes exploran la pintura, el dibujo y la escultura.</p>
+                        </div>
+                    </div>
+                    <!-- Card Taller 3 -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/3F51B5/FFFFFF?text=Deportes" alt="Deportes" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Deportes</h3>
+                            <p class="card-text">Fomentamos el trabajo en equipo, la disciplina y la vida sana a través del fútbol, baloncesto y más.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer id="contacto" class="bg-academic-secondary text-white pt-16 pb-8 px-6">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        
-        <div class="col-span-1">
-            <div class="flex items-center gap-2 mb-4">
-                <img src="img/logo.png" alt="Logo Unidad Educativa Hijos de Luz" class="h-8 w-auto">
-                <span class="font-heading font-bold text-xl">UNIDAD EDUCATIVA<br>HIJOS DE LUZ</span>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+            <!-- Logo e Info -->
+            <div class="col-span-1 md:col-span-2">
+                 <div class="flex items-center gap-4 mb-4">
+                    <img src="img/logo.png" alt="Logo U.E. Hijos de Luz" class="h-16 w-auto bg-white/10 p-2 rounded-lg">
+                    <div>
+                        <h3 class="font-bold text-2xl">U.E. HIJOS DE LUZ</h3>
+                        <p class="text-sm text-gray-300">Formando el futuro de Venezuela.</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm max-w-md">
+                    Comprometidos con una educación de excelencia que integra el conocimiento, los valores y el desarrollo personal para preparar a nuestros estudiantes para un mundo globalizado.
+                </p>
             </div>
-            <p class="text-muted text-sm leading-relaxed">
-                Educación integral desde Primaria hasta Bachillerato. Formando el futuro de nuestra nación.
-            </p>
-        </div>
 
-        <div>
-            <h4 class="font-bold mb-4 text-academic-accent">Enlaces Rápidos</h4>
-            <ul class="space-y-3 text-sm text-slate-300">
-                <li><a href="#inicio" class="hover:text-academic-light transition-colors">Inicio</a></li>
-                <li><a href="#niveles" class="hover:text-academic-light transition-colors">Oferta Académica</a></li>
-                <li><a href="#horarios" class="hover:text-academic-light transition-colors">Horarios</a></li>
-                <li><a href="#" class="hover:text-academic-light transition-colors">Admisiones</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4 class="font-bold mb-4 text-academic-accent">Contáctanos</h4>
-            <ul class="space-y-3 text-sm text-slate-300">
-                <li class="flex items-center gap-3"><i class="ph ph-phone text-xl"></i> **+58 416-2473349**</li>
-                <li class="flex items-center gap-3"><i class="ph ph-envelope text-xl"></i> **uehijosdeluz@gmail.com** (Tu email)</li>
-                <li class="flex items-center gap-3"><i class="ph ph-map-pin text-xl"></i> **Urb. Bucaral, Flor Amarilla, Valencia, Edo. Carabobo, Venezuela.**</li>
-            </ul>
-        </div>
-        
-        <div>
-            <h4 class="font-bold mb-4 text-academic-accent">Síguenos</h4>
-            <div class="flex gap-4 text-2xl">
-                <a href="https://www.facebook.com/unidadeducativa.hijosdeluz/ target="_blank" class="text-muted hover:text-academic-light transition-colors" title="Facebook"><i class="ph ph-facebook-logo"></i></a>
-                <a href="https://www.instagram.com/u.ehijosdeluz/" target="_blank" class="text-muted hover:text-academic-light transition-colors" title="Instagram"><i class="ph ph-instagram-logo"></i></a>
-                
+            <!-- Contacto -->
+            <div>
+                <h4 class="font-bold mb-4 text-academic-accent">Contáctanos</h4>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-start gap-3"><i class="ph ph-map-pin text-xl text-academic-accent"></i> <span>Urb. Bucaral, Flor Amarilla, Valencia, Edo. Carabobo.</span></li>
+                    <li class="flex items-center gap-3"><i class="ph ph-phone text-xl text-academic-accent"></i> <span>+58 416-2473349</span></li>
+                    <li class="flex items-center gap-3"><i class="ph ph-envelope text-xl text-academic-accent"></i> <span>uehijosdeluz@gmail.com</span></li>
+                </ul>
             </div>
             
-            <div class="mt-8 w-full h-16 bg-slate-700 rounded-lg flex items-center justify-center relative overflow-hidden">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.288647055729!2d-68.0069018259468!3d10.15065446820524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e67f11317025807:0x2213711d5159042a!2sU.E.%20Colegio%20Hijos%20de%20Luz!5e0!3m2!1ses-419!2sve!4v1719445940027!5m2!1ses-419!2sve" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Redes Sociales -->
+            <div>
+                <h4 class="font-bold mb-4 text-academic-accent">Síguenos</h4>
+                <div class="flex gap-4 text-2xl">
+                    <a href="https://www.instagram.com/u.ehijosdeluz/" target="_blank" class="text-gray-400 hover:text-white transition-colors" title="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="https://www.facebook.com/unidadeducativa.hijosdeluz/" target="_blank" class="text-gray-400 hover:text-white transition-colors" title="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                </div>
             </div>
         </div>
-        <div class="border-t border-slate-700 pt-8 text-center text-xs text-muted">
-            &copy; 2025 Instituto Modelo.
+        <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-400">
+            &copy; 2025 U.E. Hijos de Luz. Todos los derechos reservados. Diseñado por Gemini.
         </div>
     </footer>
-
-    <a 
-        href="https://wa.me/584162473349?text=Hola,%20vengo%20de%20la%20página%20web%20y%20quisiera%20información%20sobre%20las%20inscripciones." 
-        target="_blank" 
-        class="whatsapp-float bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg fixed bottom-6 right-6 z-50 transition-transform duration-300 transform hover:scale-110"
-        title="Contáctanos por WhatsApp"
-    >
-        <i class="ph ph-whatsapp-logo text-3xl"></i>
-    </a>
-
-   <script>
-        // --- DATOS DE HORARIOS COMPLETOS (CORREGIDOS Y COMPLETOS) ---
-        const baseDeDatosHorarios = {
-            "1": [ // 1er AÑO
-                // BLOQUE 1: 12:30 a 13:50 (GCRP, Geog/Hist, Ciencias Nat, Orientacion, Castellano)
-                { hora: "12:30 - 13:10", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
-                { hora: "13:10 - 13:50", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
-                // BLOQUE 2: 13:50 a 15:10 (Ingles, GCRP, Geog/Hist, Castellano, GCRP)
-                { hora: "13:50 - 14:30", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
-                { hora: "14:30 - 15:10", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
-                // RECREO
-                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-                // BLOQUE 3: 15:20 a 16:40 (Matematica, Castellano, Disciplina, Educacion Fisica, Arte)
-                { hora: "15:20 - 16:00", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
-                { hora: "16:00 - 16:40", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
-                // BLOQUE 4: 16:40 a 18:00 (Ciencias Nat, Ingles, Matematica, Geog/Hist, Ciencias Nat)
-                { hora: "16:40 - 17:20", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
-                { hora: "17:20 - 18:00", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
-            ],
-            "2": [ // 2do AÑO
-                // BLOQUE 1: 12:30 a 13:50 (Matematica, Arte, Arte, Educacion Fisica, GCRP)
-                { hora: "12:30 - 13:10", lunes: "Matemática", martes: "Arte y Patrimonio", miercoles: "Arte y Patrimonio", jueves: "Educación Física", viernes: "G.C.R.P." },
-                { hora: "13:10 - 13:50", lunes: "Matemática", martes: "Arte y Patrimonio", miercoles: "Arte y Patrimonio", jueves: "Educación Física", viernes: "G.C.R.P." },
-                // BLOQUE 2: 13:50 a 15:10 (Ciencias Nat, Ciencias Nat, Ingles, Orientacion, Matematica)
-                { hora: "13:50 - 14:30", lunes: "Ciencias Naturales", martes: "Ciencias Naturales", miercoles: "Inglés", jueves: "Orientación", viernes: "Matemática" },
-                { hora: "14:30 - 15:10", lunes: "Ciencias Naturales", martes: "Ciencias Naturales", miercoles: "Inglés", jueves: "Orientación", viernes: "Matemática" },
-                // RECREO
-                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-                // BLOQUE 3: 15:20 a 16:40 (Ingles, GCRP, Ciencias Nat, Geog/Hist, Castellano)
-                { hora: "15:20 - 16:00", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Ciencias Naturales", jueves: "Geografía, Historia y Ciudadanía", viernes: "Castellano" },
-                { hora: "16:00 - 16:40", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Ciencias Naturales", jueves: "Geografía, Historia y Ciudadanía", viernes: "Castellano" },
-                // BLOQUE 4: 16:40 a 18:00 (Libre, Castellano, Disciplina, Libre, Geog/Hist)
-                { hora: "16:40 - 17:20", lunes: "LIBRE", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "LIBRE", viernes: "Geografía, Historia y Ciudadanía" },
-                { hora: "17:20 - 18:00", lunes: "LIBRE", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "LIBRE", viernes: "Geografía, Historia y Ciudadanía" },
-            ],
-            "3": [ // 3er AÑO
-                // BLOQUE 1: 12:30 a 13:50 (GCRP, Geog/Hist, Ciencias Nat, Orientacion, Castellano)
-                { hora: "12:30 - 13:10", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
-                { hora: "13:10 - 13:50", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Ciencias Naturales", jueves: "Orientación", viernes: "Castellano" },
-                // BLOQUE 2: 13:50 a 15:10 (Ingles, GCRP, Geog/Hist, Castellano, GCRP)
-                { hora: "13:50 - 14:30", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
-                { hora: "14:30 - 15:10", lunes: "Inglés", martes: "G.C.R.P.", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Castellano", viernes: "G.C.R.P." },
-                // RECREO
-                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-                // BLOQUE 3: 15:20 a 16:40 (Matematica, Castellano, Disciplina, Educacion Fisica, Arte)
-                { hora: "15:20 - 16:00", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
-                { hora: "16:00 - 16:40", lunes: "Matemática", martes: "Castellano", miercoles: "Disciplina y Valores", jueves: "Educación Física", viernes: "Arte y Patrimonio" },
-                // BLOQUE 4: 16:40 a 18:00 (Ciencias Nat, Ingles, Matematica, Geog/Hist, Ciencias Nat)
-                { hora: "16:40 - 17:20", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
-                { hora: "17:20 - 18:00", lunes: "Ciencias Naturales", martes: "Inglés", miercoles: "Matemática", jueves: "Geografía, Historia y Ciudadanía", viernes: "Ciencias Naturales" },
-            ],
-            "4": [ // 4to AÑO (COMPLETADO)
-                // BLOQUE 1: 12:30 a 13:50 (Ingles, Ingles, Geog/Hist, Fisica, Libre)
-                { hora: "12:30 - 13:10", lunes: "Inglés", martes: "Inglés", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Física", viernes: "LIBRE" },
-                { hora: "13:10 - 13:50", lunes: "Inglés", martes: "Inglés", miercoles: "Geografía, Historia y Ciudadanía", jueves: "Física", viernes: "LIBRE" },
-                // BLOQUE 2: 13:50 a 15:10 (Orientacion, Castellano, Matematica, Educacion Fisica, Formacion y Soberania Nacional)
-                { hora: "13:50 - 14:30", lunes: "Orientación", martes: "Castellano", miercoles: "Matemática", jueves: "Educación Física", viernes: "Formación y Soberanía Nacional" },
-                { hora: "14:30 - 15:10", lunes: "Orientación", martes: "Castellano", miercoles: "Matemática", jueves: "Educación Física", viernes: "Formación y Soberanía Nacional" },
-                // RECREO
-                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-                // BLOQUE 3: 15:20 a 16:40 (GCRP, Geog/Hist, Química, Química, Física)
-                { hora: "15:20 - 16:00", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Química", jueves: "Química", viernes: "Física" },
-                { hora: "16:00 - 16:40", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Química", jueves: "Química", viernes: "Física" },
-                // BLOQUE 4: 16:40 a 18:00 (Matematica, GCRP, Biologia, Castellano, Biologia)
-                { hora: "16:40 - 17:20", lunes: "Matemática", martes: "G.C.R.P.", miercoles: "Biología", jueves: "Castellano", viernes: "Biología" },
-                { hora: "17:20 - 18:00", lunes: "Matemática", martes: "G.C.R.P.", miercoles: "Biología", jueves: "Castellano", viernes: "Biología" },
-            ],
-            "5": [ // 5to AÑO
-                // BLOQUE 1: 12:30 a 13:50 (Biologia, Castellano, Matematica, Castellano, Ciencias de la Tierra)
-                { hora: "12:30 - 13:10", lunes: "Biología", martes: "Castellano", miercoles: "Matemática", jueves: "Castellano", viernes: "Ciencias de la Tierra" },
-                { hora: "13:10 - 13:50", lunes: "Biología", martes: "Castellano", miercoles: "Matemática", jueves: "Castellano", viernes: "Ciencias de la Tierra" },
-                // BLOQUE 2: 13:50 a 15:10 (Matematica, Ingles, Biologia, Quimica, Geog/Hist)
-                { hora: "13:50 - 14:30", lunes: "Matemática", martes: "Inglés", miercoles: "Biología", jueves: "Química", viernes: "Geografía, Historia y Ciudadanía" },
-                { hora: "14:30 - 15:10", lunes: "Matemática", martes: "Inglés", miercoles: "Biología", jueves: "Química", viernes: "Geografía, Historia y Ciudadanía" },
-                // RECREO
-                { hora: "15:10 - 15:20", lunes: "RECREO", martes: "RECREO", miercoles: "RECREO", jueves: "RECREO", viernes: "RECREO", esRecreo: true },
-                // BLOQUE 3: 15:20 a 16:40 (Quimica, GCRP, Ingles, Fisica, Formacion y Soberania Nacional)
-                { hora: "15:20 - 16:00", lunes: "Química", martes: "G.C.R.P.", miercoles: "Inglés", jueves: "Física", viernes: "Formación y Soberanía Nacional" },
-                { hora: "16:00 - 16:40", lunes: "Química", martes: "G.C.R.P.", miercoles: "Inglés", jueves: "Física", viernes: "Formación y Soberanía Nacional" },
-                // BLOQUE 4: 16:40 a 18:00 (GCRP, Geog/Hist, Orientacion, Educacion Fisica, Fisica)
-                { hora: "16:40 - 17:20", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Orientación", jueves: "Educación Física", viernes: "Física" },
-                { hora: "17:20 - 18:00", lunes: "G.C.R.P.", martes: "Geografía, Historia y Ciudadanía", miercoles: "Orientación", jueves: "Educación Física", viernes: "Física" },
-            ]
-        };
-
-        // --- FUNCIONALIDAD JS ---
-        // (El código de las funciones va aquí abajo, fuera del objeto baseDeDatosHorarios)
-
-        const cuerpoTabla = document.getElementById('cuerpo-tabla');
-        const anoSeleccionadoTitulo = document.getElementById('ano-seleccionado');
-        const tablaContainer = document.getElementById('tabla-container');
-        const estadoVacio = document.getElementById('estado-vacio');
-        const estadoPrimaria = document.getElementById('estado-primaria');
-        const btnHPrimaria = document.getElementById('btn-h-primaria');
-        const btnHBachillerato = document.getElementById('btn-h-bachillerato');
-        const selectorAnosContainer = document.getElementById('selector-anos-container');
-
-        // Módulo de Horarios
-        function cargarHorario(ano) {
-            const horario = baseDeDatosHorarios[ano.toString()];
-
-            if (!horario) {
-                cuerpoTabla.innerHTML = '';
-                anoSeleccionadoTitulo.textContent = `${ano}º Año (Sin datos)`;
-                tablaContainer.classList.remove('hidden');
-                estadoVacio.classList.add('hidden');
-                return;
-            }
-
-            cuerpoTabla.innerHTML = '';
-            horario.forEach(fila => {
-                const tr = document.createElement('tr');
-                tr.classList.add('hover:bg-white', 'transition-colors');
-                if (fila.esRecreo) {
-                    tr.classList.add('bg-academic-accent/10', 'font-bold', 'text-academic-primary', 'whitespace-nowrap');
-                } else {
-                    tr.classList.add('text-muted');
-                }
-
-                tr.innerHTML = `
-                    <th class="px-4 py-2 font-bold whitespace-nowrap">${fila.hora}</th>
-                    <td class="px-4 py-2">${fila.lunes}</td>
-                    <td class="px-4 py-2">${fila.martes}</td>
-                    <td class="px-4 py-2">${fila.miercoles}</td>
-                    <td class="px-4 py-2">${fila.jueves}</td>
-                    <td class="px-4 py-2">${fila.viernes}</td>
-                `;
-                cuerpoTabla.appendChild(tr);
-            });
-
-            anoSeleccionadoTitulo.textContent = `${ano}º Año`;
-            tablaContainer.classList.remove('hidden');
-            estadoVacio.classList.add('hidden');
-            estadoPrimaria.classList.add('hidden');
-
-            // Resalta el botón del año seleccionado
-            document.querySelectorAll('.btn-ano').forEach(btn => {
-                btn.classList.remove('bg-white', 'text-academic-primary', 'ring-2', 'ring-academic-accent');
-                btn.classList.add('bg-slate-700', 'hover:bg-white', 'hover:text-academic-primary');
-            });
-            const botonActual = document.querySelector(`.btn-ano:nth-child(${ano})`);
-            if (botonActual) {
-                botonActual.classList.remove('bg-slate-700', 'hover:bg-white', 'hover:text-academic-primary');
-                botonActual.classList.add('bg-white', 'text-academic-primary', 'ring-2', 'ring-academic-accent');
-            }
-        }
-
-        function seleccionarEtapa(etapa) {
-            // Limpia el estado actual de los botones de etapa
-            btnHPrimaria.classList.remove('bg-academic-accent', 'text-white', 'font-bold', 'shadow-lg', 'shadow-orange-900/20', 'border-transparent');
-            btnHBachillerato.classList.remove('bg-academic-accent', 'text-white', 'font-bold', 'shadow-lg', 'shadow-orange-900/20', 'border-transparent');
-            btnHPrimaria.classList.add('border', 'border-slate-700', 'hover:bg-slate-800', 'text-slate-300');
-            btnHBachillerato.classList.add('border', 'border-slate-700', 'hover:bg-slate-800', 'text-slate-300');
-            
-            // Ocultar/mostrar contenedores de estado
-            estadoVacio.classList.add('hidden');
-            estadoPrimaria.classList.add('hidden');
-            tablaContainer.classList.add('hidden');
-
-            if (etapa === 'primaria') {
-                // Resalta Primaria
-                btnHPrimaria.classList.add('bg-academic-accent', 'text-white', 'font-bold', 'shadow-lg', 'shadow-orange-900/20', 'border-transparent');
-                btnHPrimaria.classList.remove('border-slate-700', 'hover:bg-slate-800', 'text-slate-300');
-
-                // Muestra el mensaje de Primaria
-                estadoPrimaria.classList.remove('hidden');
-                selectorAnosContainer.classList.add('hidden'); // Oculta el selector de años
-
-            } else if (etapa === 'bachillerato') {
-                // Resalta Bachillerato
-                btnHBachillerato.classList.add('bg-academic-accent', 'text-white', 'font-bold', 'shadow-lg', 'shadow-orange-900/20', 'border-transparent');
-                btnHBachillerato.classList.remove('border-slate-700', 'hover:bg-slate-800', 'text-slate-300');
-
-                // Muestra el selector de años y carga el horario por defecto (1er año)
-                selectorAnosContainer.classList.remove('hidden');
-                tablaContainer.classList.remove('hidden');
-                cargarHorario(1); 
-            }
-        }
-
-        // Módulo de Niveles (Primaria/Bachillerato en la sección de Oferta)
-        const viewPrimaria = document.getElementById('view-primaria');
-        const viewBachillerato = document.getElementById('view-bachillerato');
-        const btnPrimaria = document.getElementById('btn-primaria');
-        const btnBachillerato = document.getElementById('btn-bachillerato');
-
-        function switchLevel(level) {
-            // Limpiar estilos de botones
-            btnPrimaria.classList.remove('bg-white', 'text-academic-primary', 'shadow-sm', 'border');
-            btnBachillerato.classList.remove('bg-white', 'text-academic-primary', 'shadow-sm', 'border');
-            btnPrimaria.classList.add('text-muted', 'hover:text-academic-primary');
-            btnBachillerato.classList.add('text-muted', 'hover:text-academic-primary');
-
-            // Ocultar todas las vistas
-            viewPrimaria.classList.add('hidden');
-            viewBachillerato.classList.add('hidden');
-
-            if (level === 'primaria') {
-                viewPrimaria.classList.remove('hidden');
-                viewPrimaria.classList.add('fade-in');
-                btnPrimaria.classList.add('bg-white', 'text-academic-primary', 'shadow-sm', 'border', 'border-slate-200');
-                btnPrimaria.classList.remove('text-muted', 'hover:text-academic-primary');
-            } else if (level === 'bachillerato') {
-                viewBachillerato.classList.remove('hidden');
-                viewBachillerato.classList.add('fade-in');
-                btnBachillerato.classList.add('bg-white', 'text-academic-primary', 'shadow-sm', 'border', 'border-slate-200');
-                btnBachillerato.classList.remove('text-muted', 'hover:text-academic-primary');
-            }
-        }
-
-        // Módulo de Navegación Móvil
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Inicialización
-            document.addEventListener('DOMContentLoaded', () => {
-                seleccionarEtapa('bachillerato'); // Carga Bachillerato por defecto
-                switchLevel('primaria'); // Muestra Primaria por defecto en la sección de Niveles
-            });
-        </script> 
-        <div class="border-t border-slate-700 pt-8 text-center text-xs text-muted">
-            &copy; 2025 Instituto Modelo. Diseñado con Gemini.
-        </div>
-    </footer> <a 
-        href="https://wa.me/584162473349?text=Hola,%20vengo%20de%20la%20página%20web%20y%20quisiera%20información%20sobre%20las%20inscripciones." 
-        target="_blank" 
-        class="whatsapp-float bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg fixed bottom-6 right-6 z-50 transition-transform duration-300 transform hover:scale-110"
-        title="Contáctanos por WhatsApp"
-    >
-        <i class="ph ph-whatsapp-logo text-3xl"></i>
-    </a>
-
-    <script src="js/phosphor-icons.js"></script>
+    
+    <!-- Scripts -->
     <script src="js/menu-responsive.js"></script>
 
 </body> 

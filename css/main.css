@@ -1,17 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
 /* Paleta de Colores y Fuentes */
 :root {
-    /* Paleta de Colores Institucional */
-    --color-academic-primary: #005A9C;   /* Azul Institucional Fuerte */
-    --color-academic-secondary: #003B6D; /* Azul Oscuro para contraste */
-    --color-academic-accent: #F7C844;    /* Amarillo/Dorado para acentos */
-    --color-text-base: #333333;         /* Gris oscuro para texto general */
-    --color-text-muted: #6c757d;        /* Gris más claro para texto secundario */
-    --color-bg-main: #F8F9FA;           /* Gris muy claro para fondo */
-    --color-white: #FFFFFF;             /* Blanco puro */
+    --color-academic-primary: #005A9C;
+    --color-academic-secondary: #003B6D;
+    --color-academic-accent: #F7C844;
+    --color-text-base: #333333;
+    --color-text-muted: #6c757d;
+    --color-bg-main: #F8F9FA;
+    --color-white: #FFFFFF;
     
-    /* Fuentes Personalizadas */
-    --font-sans: 'Lato', sans-serif;
-    --font-heading: 'Montserrat', sans-serif;
+    /* Ahora usamos Poppins como fuente principal */
+    --font-sans: 'Poppins', sans-serif;
+    --font-heading: 'Poppins', sans-serif; /* También para cabeceras para consistencia */
 }
 
 /* Estilos Globales */
@@ -27,34 +28,150 @@ html {
 
 /* Clases de utilidad para colores que complementan a Tailwind */
 .font-heading { font-family: var(--font-heading); }
-
 .bg-academic-primary { background-color: var(--color-academic-primary); }
 .text-academic-primary { color: var(--color-academic-primary); }
 .border-academic-primary { border-color: var(--color-academic-primary); }
-
 .bg-academic-secondary { background-color: var(--color-academic-secondary); }
 .text-academic-secondary { color: var(--color-academic-secondary); }
-
 .bg-academic-accent { background-color: var(--color-academic-accent); }
 .text-academic-accent { color: var(--color-academic-accent); }
 .border-academic-accent { border-color: var(--color-academic-accent); }
-
 .bg-bg-main { background-color: var(--color-bg-main); }
 .text-text-base { color: var(--color-text-base); }
 .text-muted { color: var(--color-text-muted); }
 
-/* Estilos de Componentes Específicos */
+/* Estilos para las tarjetas (Cards) */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem; /* 24px */
+}
+
+.card {
+    background-color: var(--color-white);
+    border-radius: 0.75rem; /* 12px */
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem; /* 24px */
+}
+
+.card-title {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 700;
+    color: var(--color-academic-primary);
+    margin-bottom: 0.5rem; /* 8px */
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+/* Hero personalizado con imagen de alta calidad y marca de agua del logo */
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 59, 109, 0.85), rgba(0, 59, 109, 0.75)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
     background-size: cover;
-    background-position: center;
+    background-position: center 35%;
+    position: relative;
+}
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(2,6,23,0.55) 0%, rgba(2,6,23,0.45) 50%, rgba(2,6,23,0.5) 100%);
+    z-index: 0;
+}
+.hero-bg > .relative { z-index: 10; }
+
+/* Marca de agua (logo grande en hero) */
+.hero-logo-watermark {
+    position: absolute;
+    right: -6%;
+    top: 10%;
+    width: 320px;
+    max-width: 35vw;
+    opacity: 0.08;
+    transform: rotate(-6deg);
+    z-index: 5;
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.15));
+    pointer-events: none;
 }
 
-.fade-in { 
-    animation: fadeIn 0.5s ease-in-out; 
+/* Bloque destacado del logo dentro del cuerpo */
+.brand-highlight {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(250,250,255,0.95));
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(2,6,23,0.06);
+    margin: 2rem 0;
+}
+.brand-highlight img { width: 120px; height: auto; }
+.brand-highlight .brand-text { max-width: 720px; text-align: left; }
+.brand-highlight h3 { margin: 0; font-size: 1.6rem; color: var(--color-academic-primary); }
+.brand-highlight p { margin: 0.25rem 0 0; color: var(--color-text-muted); }
+
+/* Ajustes de logo en header y footer para más presencia */
+.site-logo { height: 56px; width: auto; }
+@media (max-width: 768px) {
+    .hero-logo-watermark { width: 200px; right: -14%; top: 6%; opacity: 0.06; }
+    .brand-highlight { padding: 2rem 1rem; gap: 0.75rem; }
+    .brand-highlight img { width: 96px; }
+    .site-logo { height: 44px; }
 }
 
-@keyframes fadeIn { 
-    from { opacity: 0; transform: translateY(10px); } 
-    to { opacity: 1; transform: translateY(0); } 
+/* Ajustes adicionales: botones, headings y footer */
+.hero-heading {
+    text-shadow: 0 6px 20px rgba(2,6,23,0.6);
+}
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(90deg, var(--color-academic-accent), #f5a623);
+    color: #08203a;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(14,60,110,0.12);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.cta-button:hover { transform: translateY(-3px); box-shadow: 0 18px 30px rgba(14,60,110,0.14); }
+.cta-outline {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.7rem 1.1rem; border-radius: 999px; border: 2px solid rgba(0,0,0,0.06);
+    background: white; color: var(--color-academic-primary); font-weight:700; transition: background 150ms ease;
+}
+.cta-outline:hover { background: #f3f6fb; }
+
+.card-img { height: 220px; }
+
+.site-footer {
+    background: linear-gradient(180deg, var(--color-academic-secondary), #012a4a);
+    color: #e6eef8;
+}
+.site-footer a { color: #e6eef8; }
+.site-footer a:hover { color: var(--color-academic-accent); }
+
+@media (max-width: 640px) {
+    .hero-heading { font-size: 1.7rem; }
 }
