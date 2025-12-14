@@ -14,7 +14,38 @@
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    </head>
+    <style>
+        /* Definición de colores personalizados basados en un Azul Claro y Textos Oscuros */
+        :root {
+            /* Color Primario: Azul más suave (ideal para botones y fondos clave) */
+            --color-academic-primary: #1e40af; /* Azul Marino/Oscuro */
+            /* Color Secundario: Un tono complementario para énfasis o detalles */
+            --color-academic-secondary: #3b82f6; /* Azul más vibrante */
+            /* Color de Acento: Para pequeños detalles como iconos y líneas de separación */
+            --color-academic-accent: #f59e0b; /* Amarillo/Naranja */
+            /* Color de Fondo de la Sección Principal: Usaremos un blanco puro */
+            --color-academic-bg: #ffffff; /* Blanco Puro */
+        }
+
+        /* Asigna las variables CSS a las clases de Tailwind */
+        .text-academic-primary { color: var(--color-academic-primary); }
+        .bg-academic-primary { background-color: var(--color-academic-primary); }
+        .border-academic-primary { border-color: var(--color-academic-primary); }
+
+        .text-academic-secondary { color: var(--color-academic-secondary); }
+        .bg-academic-secondary { background-color: var(--color-academic-secondary); }
+        .border-academic-secondary { border-color: var(--color-academic-secondary); }
+
+        .text-academic-accent { color: var(--color-academic-accent); }
+        .bg-academic-accent { background-color: var(--color-academic-accent); }
+        .border-academic-accent { border-color: var(--color-academic-accent); }
+
+        .bg-academic-bg { background-color: var(--color-academic-bg); }
+
+        /* Fuente Principal (Heading): Usaremos la fuente que ya definiste (Montserrat/Lato) */
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head> <body> ```
 
 <body class="font-sans text-academic-primary bg-white antialiased">
 
