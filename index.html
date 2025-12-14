@@ -53,24 +53,92 @@
         </div>
     </header>
 
-    <section id="inicio" class="hero-bg h-screen min-h-[600px] flex items-center text-center px-6 pt-20">
-        <div class="container mx-auto max-w-5xl">
-            <span class="inline-block py-1 px-3 rounded-full bg-academic-accent/20 text-academic-accent border border-academic-accent/40 font-bold text-xs md:text-sm mb-6 uppercase tracking-wider backdrop-blur-sm">
-                Educación Integral: Primaria & Bachillerato
-            </span>
-            <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                Construyendo el futuro desde <span class="text-academic-accent">1.º Grado</span> hasta la Universidad
-            </h1>
-            <p class="text-slate-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                Formación continua con valores sólidos. Acompañamos a tus hijos en cada etapa de su crecimiento con atención personalizada y excelencia académica.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#niveles" class="px-8 py-4 bg-academic-accent hover:bg-yellow-500 text-white font-bold rounded-lg transition-all shadow-xl hover:shadow-yellow-500/20 transform hover:-translate-y-1">
-                    Conoce nuestros niveles
-                </a>
+    <section id="inicio" class="hero-bg relative overflow-hidden">
+    <div class="relative z-10 text-center py-20 md:py-32 lg:py-48 max-w-4xl mx-auto">
+        <h2 class="text-4xl md:text-6xl font-heading font-extrabold text-white leading-tight mb-4">
+            Más que educación, formamos el futuro de <span class="text-academic-accent">Valencia.</span>
+        </h2>
+        <p class="text-xl md:text-2xl text-slate-200 mb-10">
+            Excelencia académica y valores que iluminan el camino de sus hijos desde el año 2000.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#niveles" class="bg-academic-accent hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                Conoce Nuestra Propuesta
+            </a>
+            <a href="#contacto" class="bg-white hover:bg-slate-100 text-academic-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                Admisiones
+            </a>
+        </div>
+    </div>
+    </section>
+    
+    <section id="quienes-somos" class="py-20 px-6">
+    <div class="container mx-auto">
+        <h3 class="text-center text-3xl md:text-4xl font-heading font-bold text-academic-primary mb-16">
+            Unidad Educativa Hijos de Luz: 25 Años de Trayectoria
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+            <div class="md:order-2">
+                <img src="https://images.unsplash.com/photo-1558236712-cb477a16b280?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fachada de la escuela" class="rounded-xl shadow-2xl h-96 w-full object-cover">
+            </div>
+            <div class="md:order-1">
+                <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                    Fundada con el inicio del nuevo milenio, la Unidad Educativa Hijos de Luz nació con una vocación clara: ser un faro de conocimiento y valores en el estado Carabobo.
+                </p>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    A lo largo de más de dos décadas, hemos evolucionado de ser un centro educativo a convertirnos en una verdadera familia institucional. Entendemos la educación no solo como la transmisión de datos, sino como el acto de **"encender" el potencial** de cada niño y joven.
+                </p>
             </div>
         </div>
-    </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+            <div class="p-8 bg-slate-50 rounded-xl shadow-lg border-t-4 border-academic-accent">
+                <i class="ph ph-target text-4xl text-academic-accent mb-4"></i>
+                <h4 class="font-heading font-bold text-xl text-academic-primary mb-3">Nuestra Misión</h4>
+                <p class="text-slate-600">
+                    Brindar una educación integral de calidad que combine la exigencia académica con la formación del carácter. Trabajamos día a día para que cada estudiante descubra sus talentos en un ambiente de respeto, disciplina y amor por el conocimiento.
+                </p>
+            </div>
+            <div class="p-8 bg-slate-50 rounded-xl shadow-lg border-t-4 border-academic-accent">
+                <i class="ph ph-eye text-4xl text-academic-accent mb-4"></i>
+                <h4 class="font-heading font-bold text-xl text-academic-primary mb-3">Nuestra Visión</h4>
+                <p class="text-slate-600">
+                    Ser la institución educativa referente en Valencia por nuestro modelo humanista y de vanguardia, donde egresan líderes íntegros capaces de ser "luz" y generar un impacto positivo en la sociedad venezolana.
+                </p>
+            </div>
+        </div>
+
+        <h4 class="text-center text-2xl font-heading font-bold text-academic-primary mb-10">Nuestros Pilares Educativos</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            
+            <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
+                <i class="ph ph-heartbeat text-4xl text-academic-accent mb-3"></i>
+                <p class="font-bold text-academic-primary">Integridad y Valores</p>
+                <p class="text-sm text-slate-500 mt-1">Fomentamos principios morales sólidos que guían el comportamiento.</p>
+            </div>
+            
+            <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
+                <i class="ph ph-rocket-launch text-4xl text-academic-accent mb-3"></i>
+                <p class="font-bold text-academic-primary">Excelencia Académica</p>
+                <p class="text-sm text-slate-500 mt-1">Equipo docente comprometido y en constante actualización pedagógica.</p>
+            </div>
+            
+            <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
+                <i class="ph ph-users-three text-4xl text-academic-accent mb-3"></i>
+                <p class="font-bold text-academic-primary">Comunidad Unida</p>
+                <p class="text-sm text-slate-500 mt-1">Padres, maestros y alumnos trabajando juntos en un entorno seguro.</p>
+            </div>
+            
+            <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
+                <i class="ph ph-path text-4xl text-academic-accent mb-3"></i>
+                <p class="font-bold text-academic-primary">Continuidad Educativa</p>
+                <p class="text-sm text-slate-500 mt-1">Acompañamos a su hijo desde Preescolar hasta Media General.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <section id="niveles" class="py-20 px-6 bg-white">
         <div class="container mx-auto">
@@ -581,5 +649,20 @@
             switchLevel('primaria'); // Muestra Primaria por defecto en la sección de Niveles
         });
     </script>
-</body>
+        
+        </footer>
+
+    <a 
+        href="https://wa.me/+58 416-2473349?text=Hola,%20vengo%20de%20la%20página%20web%20y%20quisiera%20información%20sobre%20las%20inscripciones." 
+        target="_blank" 
+        class="whatsapp-float bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg fixed bottom-6 right-6 z-50 transition-transform duration-300 transform hover:scale-110"
+        title="Contáctanos por WhatsApp"
+    >
+        <i class="ph ph-whatsapp-logo text-3xl"></i>
+    </a>
+    <script src="js/phosphor-icons.js"></script>
+
+    <script src="js/menu-responsive.js"></script>
+
+</body> 
 </html>
