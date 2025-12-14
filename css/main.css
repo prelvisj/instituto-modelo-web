@@ -1,28 +1,60 @@
-/* CONFIGURACIÓN BASE DE TAILWIND (¡CRÍTICO!) */
-@layer base {
-    :root {
-        /* Colores Personalizados */
-        --color-academic-primary: #0f172a;
-        --color-academic-secondary: #1e293b;
-        --color-academic-accent: #d97706;
-        --color-academic-light: #f8fafc;
-        
-        /* Fuentes Personalizadas */
-        --font-sans: 'Lato', sans-serif;
-        --font-heading: 'Montserrat', sans-serif;
-    }
+/* Paleta de Colores y Fuentes */
+:root {
+    /* Paleta de Colores Institucional */
+    --color-academic-primary: #005A9C;   /* Azul Institucional Fuerte */
+    --color-academic-secondary: #003B6D; /* Azul Oscuro para contraste */
+    --color-academic-accent: #F7C844;    /* Amarillo/Dorado para acentos */
+    --color-text-base: #333333;         /* Gris oscuro para texto general */
+    --color-text-muted: #6c757d;        /* Gris más claro para texto secundario */
+    --color-bg-main: #F8F9FA;           /* Gris muy claro para fondo */
+    --color-white: #FFFFFF;             /* Blanco puro */
+    
+    /* Fuentes Personalizadas */
+    --font-sans: 'Lato', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
 }
 
-/* ESTILOS PERSONALIZADOS */
-html { scroll-behavior: smooth; }
+/* Estilos Globales */
+body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-base);
+    font-family: var(--font-sans);
+}
 
+html { 
+    scroll-behavior: smooth; 
+}
+
+/* Clases de utilidad para colores que complementan a Tailwind */
+.font-heading { font-family: var(--font-heading); }
+
+.bg-academic-primary { background-color: var(--color-academic-primary); }
+.text-academic-primary { color: var(--color-academic-primary); }
+.border-academic-primary { border-color: var(--color-academic-primary); }
+
+.bg-academic-secondary { background-color: var(--color-academic-secondary); }
+.text-academic-secondary { color: var(--color-academic-secondary); }
+
+.bg-academic-accent { background-color: var(--color-academic-accent); }
+.text-academic-accent { color: var(--color-academic-accent); }
+.border-academic-accent { border-color: var(--color-academic-accent); }
+
+.bg-bg-main { background-color: var(--color-bg-main); }
+.text-text-base { color: var(--color-text-base); }
+.text-muted { color: var(--color-text-muted); }
+
+/* Estilos de Componentes Específicos */
 .hero-bg {
-    /* Fondo de la sección principal */
-    background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-image: linear-gradient(rgba(0, 59, 109, 0.85), rgba(0, 59, 109, 0.75)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
 }
 
-/* Clase para ocultar/mostrar con animación simple */
-.fade-in { animation: fadeIn 0.5s ease-in-out; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in { 
+    animation: fadeIn 0.5s ease-in-out; 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}

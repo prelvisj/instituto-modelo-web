@@ -14,40 +14,10 @@
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <style>
-        /* Definición de colores personalizados basados en un Azul Claro y Textos Oscuros */
-        :root {
-            /* Color Primario: Azul más suave (ideal para botones y fondos clave) */
-            --color-academic-primary: #1e40af; /* Azul Marino/Oscuro */
-            /* Color Secundario: Un tono complementario para énfasis o detalles */
-            --color-academic-secondary: #3b82f6; /* Azul más vibrante */
-            /* Color de Acento: Para pequeños detalles como iconos y líneas de separación */
-            --color-academic-accent: #f59e0b; /* Amarillo/Naranja */
-            /* Color de Fondo de la Sección Principal: Usaremos un blanco puro */
-            --color-academic-bg: #ffffff; /* Blanco Puro */
-        }
 
-        /* Asigna las variables CSS a las clases de Tailwind */
-        .text-academic-primary { color: var(--color-academic-primary); }
-        .bg-academic-primary { background-color: var(--color-academic-primary); }
-        .border-academic-primary { border-color: var(--color-academic-primary); }
-
-        .text-academic-secondary { color: var(--color-academic-secondary); }
-        .bg-academic-secondary { background-color: var(--color-academic-secondary); }
-        .border-academic-secondary { border-color: var(--color-academic-secondary); }
-
-        .text-academic-accent { color: var(--color-academic-accent); }
-        .bg-academic-accent { background-color: var(--color-academic-accent); }
-        .border-academic-accent { border-color: var(--color-academic-accent); }
-
-        .bg-academic-bg { background-color: var(--color-academic-bg); }
-
-        /* Fuente Principal (Heading): Usaremos la fuente que ya definiste (Montserrat/Lato) */
-        .font-heading { font-family: 'Montserrat', sans-serif; }
-    </style>
 </head> <body> ```
 
-<body class="font-sans text-academic-primary bg-white antialiased">
+<body class="font-sans antialiased">
 
 
     <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
@@ -59,7 +29,7 @@
                </div>
             </a>
 
-            <nav class="hidden md:flex gap-8 items-center font-heading font-medium text-sm text-slate-600">
+            <nav class="hidden md:flex gap-8 items-center font-heading font-medium text-sm text-muted">
                 <a href="#inicio" class="hover:text-academic-accent transition-colors">Inicio</a>
                 <a href="#niveles" class="hover:text-academic-accent transition-colors">Oferta Académica</a>
                 <a href="#horarios" class="hover:text-academic-accent transition-colors">Horarios</a>
@@ -75,7 +45,7 @@
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl">
-            <nav class="flex flex-col p-6 gap-4 font-heading font-medium text-slate-600 text-center">
+            <nav class="flex flex-col p-6 gap-4 font-heading font-medium text-muted text-center">
                 <a href="#inicio" class="py-2 hover:text-academic-accent">Inicio</a>
                 <a href="#niveles" class="py-2 hover:text-academic-accent">Primaria y Bachillerato</a>
                 <a href="#horarios" class="py-2 hover:text-academic-accent">Consulta de Horarios</a>
@@ -96,7 +66,7 @@
             <a href="#niveles" class="bg-academic-accent hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
                 Conoce Nuestra Propuesta
             </a>
-            <a href="#contacto" class="bg-white hover:bg-slate-100 text-academic-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+            <a href="#contacto" class="bg-white hover:bg-bg-main text-academic-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
                 Admisiones
             </a>
         </div>
@@ -114,27 +84,27 @@
                 <img src="https://images.unsplash.com/photo-1558236712-cb477a16b280?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fachada de la escuela" class="rounded-xl shadow-2xl h-96 w-full object-cover">
             </div>
             <div class="md:order-1">
-                <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                <p class="text-lg text-muted leading-relaxed mb-6">
                     Fundada con el inicio del nuevo milenio, la Unidad Educativa Hijos de Luz nació con una vocación clara: ser un faro de conocimiento y valores en el estado Carabobo.
                 </p>
-                <p class="text-lg text-slate-600 leading-relaxed">
+                <p class="text-lg text-muted leading-relaxed">
                     A lo largo de más de dos décadas, hemos evolucionado de ser un centro educativo a convertirnos en una verdadera familia institucional. Entendemos la educación no solo como la transmisión de datos, sino como el acto de **"encender" el potencial** de cada niño y joven.
                 </p>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-            <div class="p-8 bg-slate-50 rounded-xl shadow-lg border-t-4 border-academic-accent">
+            <div class="p-8 bg-white rounded-xl shadow-lg border-t-4 border-academic-accent">
                 <i class="ph ph-target text-4xl text-academic-accent mb-4"></i>
                 <h4 class="font-heading font-bold text-xl text-academic-primary mb-3">Nuestra Misión</h4>
-                <p class="text-slate-600">
+                <p class="text-muted">
                     Brindar una educación integral de calidad que combine la exigencia académica con la formación del carácter. Trabajamos día a día para que cada estudiante descubra sus talentos en un ambiente de respeto, disciplina y amor por el conocimiento.
                 </p>
             </div>
-            <div class="p-8 bg-slate-50 rounded-xl shadow-lg border-t-4 border-academic-accent">
+            <div class="p-8 bg-white rounded-xl shadow-lg border-t-4 border-academic-accent">
                 <i class="ph ph-eye text-4xl text-academic-accent mb-4"></i>
                 <h4 class="font-heading font-bold text-xl text-academic-primary mb-3">Nuestra Visión</h4>
-                <p class="text-slate-600">
+                <p class="text-muted">
                     Ser la institución educativa referente en Valencia por nuestro modelo humanista y de vanguardia, donde egresan líderes íntegros capaces de ser "luz" y generar un impacto positivo en la sociedad venezolana.
                 </p>
             </div>
@@ -146,25 +116,25 @@
             <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
                 <i class="ph ph-heartbeat text-4xl text-academic-accent mb-3"></i>
                 <p class="font-bold text-academic-primary">Integridad y Valores</p>
-                <p class="text-sm text-slate-500 mt-1">Fomentamos principios morales sólidos que guían el comportamiento.</p>
+                <p class="text-sm text-muted mt-1">Fomentamos principios morales sólidos que guían el comportamiento.</p>
             </div>
             
             <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
                 <i class="ph ph-rocket-launch text-4xl text-academic-accent mb-3"></i>
                 <p class="font-bold text-academic-primary">Excelencia Académica</p>
-                <p class="text-sm text-slate-500 mt-1">Equipo docente comprometido y en constante actualización pedagógica.</p>
+                <p class="text-sm text-muted mt-1">Equipo docente comprometido y en constante actualización pedagógica.</p>
             </div>
             
             <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
                 <i class="ph ph-users-three text-4xl text-academic-accent mb-3"></i>
                 <p class="font-bold text-academic-primary">Comunidad Unida</p>
-                <p class="text-sm text-slate-500 mt-1">Padres, maestros y alumnos trabajando juntos en un entorno seguro.</p>
+                <p class="text-sm text-muted mt-1">Padres, maestros y alumnos trabajando juntos en un entorno seguro.</p>
             </div>
             
             <div class="p-6 bg-white rounded-xl shadow-md border border-slate-200">
                 <i class="ph ph-path text-4xl text-academic-accent mb-3"></i>
                 <p class="font-bold text-academic-primary">Continuidad Educativa</p>
-                <p class="text-sm text-slate-500 mt-1">Acompañamos a su hijo desde Preescolar hasta Media General.</p>
+                <p class="text-sm text-muted mt-1">Acompañamos a su hijo desde Preescolar hasta Media General.</p>
             </div>
 
         </div>
@@ -177,73 +147,73 @@
                 <h2 class="font-heading text-3xl md:text-4xl font-bold text-academic-primary mb-4">Nuestros Niveles Educativos</h2>
                 <div class="h-1 w-24 bg-academic-accent mx-auto rounded-full mb-6"></div>
                 
-                <div class="inline-flex bg-slate-100 p-1 rounded-full gap-1 mb-8">
+                <div class="inline-flex bg-bg-main p-1 rounded-full gap-1 mb-8">
                     <button onclick="switchLevel('primaria')" id="btn-primaria" class="px-6 py-2 rounded-full text-sm font-bold transition-all bg-white text-academic-primary shadow-sm border border-slate-200">
                         Educación Primaria
                     </button>
-                    <button onclick="switchLevel('bachillerato')" id="btn-bachillerato" class="px-6 py-2 rounded-full text-sm font-bold transition-all text-slate-500 hover:text-academic-primary">
+                    <button onclick="switchLevel('bachillerato')" id="btn-bachillerato" class="px-6 py-2 rounded-full text-sm font-bold transition-all text-muted hover:text-academic-primary">
                         Bachillerato
                     </button>
                 </div>
             </div>
 
             <div id="view-primaria" class="fade-in">
-                <div class="mb-6 text-center text-slate-500 italic">De 1.º Grado a 6.º Grado: Formando las bases.</div>
+                <div class="mb-6 text-center text-muted italic">De 1.º Grado a 6.º Grado: Formando las bases.</div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <article class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
+                    <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">1º</div>
                             <h3 class="font-heading font-bold text-lg text-slate-700">Primer Grado</h3>
                         </div>
-                        <p class="text-slate-500 text-sm">Inicio de la lectoescritura y pensamiento lógico básico.</p>
+                        <p class="text-muted text-sm">Inicio de la lectoescritura y pensamiento lógico básico.</p>
                     </article>
-                    <article class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
+                    <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">2º</div>
                             <h3 class="font-heading font-bold text-lg text-slate-700">Segundo Grado</h3>
                         </div>
-                        <p class="text-slate-500 text-sm">Consolidación de la lectura y operaciones matemáticas básicas.</p>
+                        <p class="text-muted text-sm">Consolidación de la lectura y operaciones matemáticas básicas.</p>
                     </article>
-                     <article class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
+                     <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">3º</div>
                             <h3 class="font-heading font-bold text-lg text-slate-700">Tercer Grado</h3>
                         </div>
-                        <p class="text-slate-500 text-sm">Expansión del vocabulario y conocimiento del entorno.</p>
+                        <p class="text-muted text-sm">Expansión del vocabulario y conocimiento del entorno.</p>
                     </article>
-                     <article class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
+                     <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">4º</div>
                             <h3 class="font-heading font-bold text-lg text-slate-700">Cuarto Grado</h3>
                         </div>
-                        <p class="text-slate-500 text-sm">Desarrollo de habilidades de investigación y trabajo en equipo.</p>
+                        <p class="text-muted text-sm">Desarrollo de habilidades de investigación y trabajo en equipo.</p>
                     </article>
-                     <article class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
+                     <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">5º</div>
                             <h3 class="font-heading font-bold text-lg text-slate-700">Quinto Grado</h3>
                         </div>
-                        <p class="text-slate-500 text-sm">Profundización en matemáticas y ciencias sociales.</p>
+                        <p class="text-muted text-sm">Profundización en matemáticas y ciencias sociales.</p>
                     </article>
-                     <article class="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
+                     <article class="bg-white p-6 rounded-xl border border-slate-100 hover:border-academic-accent/30 hover:shadow-lg transition-all group">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-10 h-10 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold">6º</div>
                             <h3 class="font-heading font-bold text-lg text-slate-700">Sexto Grado</h3>
                         </div>
-                        <p class="text-slate-500 text-sm">Preparación para el nivel medio y autonomía estudiantil.</p>
+                        <p class="text-muted text-sm">Preparación para el nivel medio y autonomía estudiantil.</p>
                     </article>
                 </div>
             </div>
 
             <div id="view-bachillerato" class="hidden fade-in">
-                <div class="mb-6 text-center text-slate-500 italic">De 1.º Año a 5.º Año: Rumbo a la Universidad.</div>
+                <div class="mb-6 text-center text-muted italic">De 1.º Año a 5.º Año: Rumbo a la Universidad.</div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="font-heading text-xl font-bold text-academic-primary">1.º Año</h3>
                             <i class="ph ph-atom text-2xl text-academic-accent"></i>
                         </div>
-                        <p class="text-slate-500 text-sm mb-4">Transición a la secundaria. Enfoque en adaptación y bases científicas.</p>
+                        <p class="text-muted text-sm mb-4">Transición a la secundaria. Enfoque en adaptación y bases científicas.</p>
                     </article>
 
                     <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
@@ -251,7 +221,7 @@
                             <h3 class="font-heading text-xl font-bold text-academic-primary">2.º Año</h3>
                             <i class="ph ph-calculator text-2xl text-academic-accent"></i>
                         </div>
-                        <p class="text-slate-500 text-sm mb-4">Desarrollo de pensamiento lógico-matemático y expresión verbal.</p>
+                        <p class="text-muted text-sm mb-4">Desarrollo de pensamiento lógico-matemático y expresión verbal.</p>
                     </article>
 
                     <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
@@ -259,7 +229,7 @@
                             <h3 class="font-heading text-xl font-bold text-academic-primary">3.º Año</h3>
                             <i class="ph ph-flask text-2xl text-academic-accent"></i>
                         </div>
-                        <p class="text-slate-500 text-sm mb-4">Introducción a Física y Química. Proyectos investigativos.</p>
+                        <p class="text-muted text-sm mb-4">Introducción a Física y Química. Proyectos investigativos.</p>
                     </article>
 
                     <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
@@ -267,7 +237,7 @@
                             <h3 class="font-heading text-xl font-bold text-academic-primary">4.º Año</h3>
                             <i class="ph ph-compass text-2xl text-academic-accent"></i>
                         </div>
-                        <p class="text-slate-500 text-sm mb-4">Ciclo Diversificado. Preparación pre-universitaria.</p>
+                        <p class="text-muted text-sm mb-4">Ciclo Diversificado. Preparación pre-universitaria.</p>
                     </article>
 
                     <article class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group border-l-4 border-l-academic-primary">
@@ -275,13 +245,13 @@
                             <h3 class="font-heading text-xl font-bold text-academic-primary">5.º Año</h3>
                             <i class="ph ph-student text-2xl text-academic-accent"></i>
                         </div>
-                        <p class="text-slate-500 text-sm mb-4">Proyecto de grado y culminación del bachillerato.</p>
+                        <p class="text-muted text-sm mb-4">Proyecto de grado y culminación del bachillerato.</p>
                     </article>
                 </div>
             </div>
         </div>
     </section>
-<section id="horarios" class="py-20 px-6 bg-slate-100">
+<section id="horarios" class="py-20 px-6 bg-bg-main">
     <div class="container mx-auto">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[500px]">
             
@@ -289,15 +259,15 @@
                 <div class="mb-8">
                     <i class="ph ph-clock text-4xl text-academic-accent mb-2"></i>
                     <h2 class="font-heading text-2xl font-bold">Horarios de Clases</h2>
-                    <p class="text-slate-400 text-sm mt-2">Consulta la distribución académica semanal.</p>
+                    <p class="text-muted text-sm mt-2">Consulta la distribución académica semanal.</p>
                 </div>
 
                 <div class="mb-6">
-                    <label class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2 block">1. Selecciona Etapa</label>
+                    <label class="text-xs font-bold uppercase tracking-widest text-muted mb-2 block">1. Selecciona Etapa</label>
                     <div class="flex flex-col gap-2">
                         <button onclick="seleccionarEtapa('primaria')" id="btn-h-primaria" class="text-left px-4 py-3 rounded-lg border border-slate-700 hover:bg-slate-800 transition-colors flex justify-between items-center group">
                             <span>Primaria (1º - 6º)</span>
-                            <i class="ph ph-caret-right text-slate-500 group-hover:text-academic-accent"></i>
+                            <i class="ph ph-caret-right text-muted group-hover:text-academic-accent"></i>
                         </button>
                         <button onclick="seleccionarEtapa('bachillerato')" id="btn-h-bachillerato" class="text-left px-4 py-3 rounded-lg bg-academic-accent text-white font-bold shadow-lg shadow-orange-900/20 flex justify-between items-center">
                             <span>Bachillerato (1º - 5º)</span>
@@ -307,7 +277,7 @@
                 </div>
 
                 <div id="selector-anos-container" class="transition-all duration-300">
-                    <label class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2 block">2. Selecciona Año</label>
+                    <label class="text-xs font-bold uppercase tracking-widest text-muted mb-2 block">2. Selecciona Año</label>
                     <div class="grid grid-cols-5 gap-1">
                         <button onclick="cargarHorario(1)" class="btn-ano aspect-square rounded bg-slate-700 hover:bg-white hover:text-academic-primary font-bold text-sm transition-all focus:bg-white focus:text-academic-primary focus:ring-2 focus:ring-academic-accent">1º</button>
                         <button onclick="cargarHorario(2)" class="btn-ano aspect-square rounded bg-slate-700 hover:bg-white hover:text-academic-primary font-bold text-sm transition-all focus:bg-white focus:text-academic-primary focus:ring-2 focus:ring-academic-accent">2º</button>
@@ -318,9 +288,9 @@
                 </div>
             </div>
 
-            <div class="md:w-2/3 p-6 md:p-10 bg-slate-50 relative overflow-x-auto">
+            <div class="md:w-2/3 p-6 md:p-10 bg-white relative overflow-x-auto">
                 
-                <div id="estado-vacio" class="hidden h-full flex flex-col items-center justify-center text-center text-slate-400">
+                <div id="estado-vacio" class="hidden h-full flex flex-col items-center justify-center text-center text-muted">
                     <i class="ph ph-chalkboard-teacher text-6xl mb-4 text-slate-300"></i>
                     <p class="text-lg">Selecciona un año para ver el horario.</p>
                 </div>
@@ -330,7 +300,7 @@
                         <i class="ph ph-info text-4xl text-blue-500"></i>
                     </div>
                     <h3 class="text-xl font-heading font-bold text-academic-primary mb-4">...</h3>
-                    <p class="text-slate-500 max-w-sm">Los horarios de primaria se gestionan directamente con la coordinación docente. Por favor, acérquese a dirección.</p>
+                    <p class="text-muted max-w-sm">Los horarios de primaria se gestionan directamente con la coordinación docente. Por favor, acérquese a dirección.</p>
                 </div>
 
                 <div id="tabla-container" class="">
@@ -341,7 +311,7 @@
                     
                     <div class="overflow-hidden rounded-lg border border-slate-200 shadow-sm bg-white">
                         <table class="w-full text-sm text-left">
-                            <thead class="text-xs text-slate-500 uppercase bg-slate-100 border-b border-slate-200">
+                            <thead class="text-xs text-muted uppercase bg-bg-main border-b border-slate-200">
                                 <tr>
                                     <th class="px-4 py-3 font-bold">Hora</th>
                                     <th class="px-4 py-3 text-academic-primary">Lunes</th>
@@ -355,7 +325,7 @@
                                 </tbody>
                         </table>
                     </div>
-                    <div class="mt-4 flex items-center gap-2 text-xs text-slate-400">
+                    <div class="mt-4 flex items-center gap-2 text-xs text-muted">
                         <i class="ph ph-printer"></i>
                         <a href="#" class="hover:underline hover:text-academic-accent">Descargar versión PDF</a>
                     </div>
@@ -365,7 +335,7 @@
     </div>
 </section>
 
-<section id="noticias" class="py-20 px-6 bg-slate-50">
+<section id="noticias" class="py-20 px-6 bg-white">
     <div class="container mx-auto">
         <h2 class="text-center text-3xl md:text-4xl font-heading font-extrabold text-academic-primary mb-12">
             Noticias y Momentos Destacados
@@ -400,7 +370,7 @@
                 <h3 class="text-3xl font-heading font-bold text-academic-primary mb-4">
                     Acto de Graduación Promo 2024
                 </h3>
-                <p class="text-slate-600 mb-6 leading-relaxed">
+                <p class="text-muted mb-6 leading-relaxed">
                     Un momento inolvidable que marca la culminación de los estudios de nuestros bachilleres. La solemne ceremonia se llevó a cabo en el Anfiteatro de Bárbula de la Universidad de Carabobo, celebrando el éxito y el futuro de una nueva generación.
                 </p>
                 <ul class="space-y-2 text-slate-700">
@@ -422,7 +392,7 @@
         <div class="text-center mb-16">
             <h2 class="font-heading text-3xl md:text-4xl font-bold text-academic-primary mb-4">Eventos y Noticias Recientes</h2>
             <div class="h-1 w-24 bg-academic-accent mx-auto rounded-full mb-4"></div>
-            <p class="text-slate-600 max-w-2xl mx-auto">
+            <p class="text-muted max-w-2xl mx-auto">
                 Mantente al día con las actividades, logros estudiantiles y comunicados oficiales del instituto.
             </p>
         </div>
@@ -434,7 +404,7 @@
                 <div class="p-6">
                     <span class="text-xs font-bold uppercase text-academic-accent">Administrativo</span>
                     <h3 class="font-heading text-xl font-bold text-academic-primary mt-2 mb-3">Inicio de Proceso de Inscripción 2026</h3>
-                    <p class="text-slate-500 text-sm mb-4">La Dirección anuncia la apertura del proceso de admisiones para todos los niveles académicos.</p>
+                    <p class="text-muted text-sm mb-4">La Dirección anuncia la apertura del proceso de admisiones para todos los niveles académicos.</p>
                     <a href="#" class="text-academic-primary font-bold text-sm hover:text-academic-accent transition-colors">Leer más &rarr;</a>
                 </div>
             </article>
@@ -444,7 +414,7 @@
                 <div class="p-6">
                     <span class="text-xs font-bold uppercase text-green-600">Logros</span>
                     <h3 class="font-heading text-xl font-bold text-academic-primary mt-2 mb-3">Equipo de Química gana el Premio Nacional</h3>
-                    <p class="text-slate-500 text-sm mb-4">Felicidades a los estudiantes de 5º año por su destacada participación y triunfo.</p>
+                    <p class="text-muted text-sm mb-4">Felicidades a los estudiantes de 5º año por su destacada participación y triunfo.</p>
                     <a href="#" class="text-academic-primary font-bold text-sm hover:text-academic-accent transition-colors">Leer más &rarr;</a>
                 </div>
             </article>
@@ -454,7 +424,7 @@
                 <div class="p-6">
                     <span class="text-xs font-bold uppercase text-blue-600">Eventos</span>
                     <h3 class="font-heading text-xl font-bold text-academic-primary mt-2 mb-3">Festival de Artes y Talentos 2025</h3>
-                    <p class="text-slate-500 text-sm mb-4">Invitación a padres y representantes al evento cultural de fin de semestre.</p>
+                    <p class="text-muted text-sm mb-4">Invitación a padres y representantes al evento cultural de fin de semestre.</p>
                     <a href="#" class="text-academic-primary font-bold text-sm hover:text-academic-accent transition-colors">Leer más &rarr;</a>
                 </div>
             </article>
@@ -469,7 +439,7 @@
                 <img src="img/logo.png" alt="Logo Unidad Educativa Hijos de Luz" class="h-8 w-auto">
                 <span class="font-heading font-bold text-xl">UNIDAD EDUCATIVA<br>HIJOS DE LUZ</span>
             </div>
-            <p class="text-slate-400 text-sm leading-relaxed">
+            <p class="text-muted text-sm leading-relaxed">
                 Educación integral desde Primaria hasta Bachillerato. Formando el futuro de nuestra nación.
             </p>
         </div>
@@ -496,8 +466,8 @@
         <div>
             <h4 class="font-bold mb-4 text-academic-accent">Síguenos</h4>
             <div class="flex gap-4 text-2xl">
-                <a href="https://www.facebook.com/unidadeducativa.hijosdeluz/ target="_blank" class="text-slate-400 hover:text-academic-light transition-colors" title="Facebook"><i class="ph ph-facebook-logo"></i></a>
-                <a href="https://www.instagram.com/u.ehijosdeluz/" target="_blank" class="text-slate-400 hover:text-academic-light transition-colors" title="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                <a href="https://www.facebook.com/unidadeducativa.hijosdeluz/ target="_blank" class="text-muted hover:text-academic-light transition-colors" title="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                <a href="https://www.instagram.com/u.ehijosdeluz/" target="_blank" class="text-muted hover:text-academic-light transition-colors" title="Instagram"><i class="ph ph-instagram-logo"></i></a>
                 
             </div>
             
@@ -505,7 +475,7 @@
                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.288647055729!2d-68.0069018259468!3d10.15065446820524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e67f11317025807:0x2213711d5159042a!2sU.E.%20Colegio%20Hijos%20de%20Luz!5e0!3m2!1ses-419!2sve!4v1719445940027!5m2!1ses-419!2sve" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-        <div class="border-t border-slate-700 pt-8 text-center text-xs text-slate-500">
+        <div class="border-t border-slate-700 pt-8 text-center text-xs text-muted">
             &copy; 2025 Instituto Modelo.
         </div>
     </footer>
@@ -631,11 +601,11 @@
             cuerpoTabla.innerHTML = '';
             horario.forEach(fila => {
                 const tr = document.createElement('tr');
-                tr.classList.add('hover:bg-slate-50', 'transition-colors');
+                tr.classList.add('hover:bg-white', 'transition-colors');
                 if (fila.esRecreo) {
                     tr.classList.add('bg-academic-accent/10', 'font-bold', 'text-academic-primary', 'whitespace-nowrap');
                 } else {
-                    tr.classList.add('text-slate-600');
+                    tr.classList.add('text-muted');
                 }
 
                 tr.innerHTML = `
@@ -709,8 +679,8 @@
             // Limpiar estilos de botones
             btnPrimaria.classList.remove('bg-white', 'text-academic-primary', 'shadow-sm', 'border');
             btnBachillerato.classList.remove('bg-white', 'text-academic-primary', 'shadow-sm', 'border');
-            btnPrimaria.classList.add('text-slate-500', 'hover:text-academic-primary');
-            btnBachillerato.classList.add('text-slate-500', 'hover:text-academic-primary');
+            btnPrimaria.classList.add('text-muted', 'hover:text-academic-primary');
+            btnBachillerato.classList.add('text-muted', 'hover:text-academic-primary');
 
             // Ocultar todas las vistas
             viewPrimaria.classList.add('hidden');
@@ -720,12 +690,12 @@
                 viewPrimaria.classList.remove('hidden');
                 viewPrimaria.classList.add('fade-in');
                 btnPrimaria.classList.add('bg-white', 'text-academic-primary', 'shadow-sm', 'border', 'border-slate-200');
-                btnPrimaria.classList.remove('text-slate-500', 'hover:text-academic-primary');
+                btnPrimaria.classList.remove('text-muted', 'hover:text-academic-primary');
             } else if (level === 'bachillerato') {
                 viewBachillerato.classList.remove('hidden');
                 viewBachillerato.classList.add('fade-in');
                 btnBachillerato.classList.add('bg-white', 'text-academic-primary', 'shadow-sm', 'border', 'border-slate-200');
-                btnBachillerato.classList.remove('text-slate-500', 'hover:text-academic-primary');
+                btnBachillerato.classList.remove('text-muted', 'hover:text-academic-primary');
             }
         }
 
@@ -742,7 +712,7 @@
                 switchLevel('primaria'); // Muestra Primaria por defecto en la sección de Niveles
             });
         </script> 
-        <div class="border-t border-slate-700 pt-8 text-center text-xs text-slate-500">
+        <div class="border-t border-slate-700 pt-8 text-center text-xs text-muted">
             &copy; 2025 Instituto Modelo. Diseñado con Gemini.
         </div>
     </footer> <a 
