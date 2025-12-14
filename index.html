@@ -53,6 +53,69 @@
         </div>
     </header>
 
+            <!-- Sección Admisiones -->
+            <section id="admisiones" class="admissions-section">
+                <div class="container mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        <div class="md:col-span-1">
+                            <div class="admissions-card">
+                                <h3 class="font-heading">Admisiones 2026</h3>
+                                <p class="text-slate-600">Solicita información y reserva una entrevista. Completa el formulario y nos pondremos en contacto para guiarte en el proceso de inscripción.</p>
+                                <ul class="mt-4 text-slate-700 space-y-2">
+                                    <li>• Cupos limitados por nivel.</li>
+                                    <li>• Atención personalizada para cada familia.</li>
+                                    <li>• Acompañamiento en todo el proceso de matrícula.</li>
+                                </ul>
+                                <div class="mt-6">
+                                    <a href="#contacto" class="admit-cta">Contacto directo</a>
+                                    <p class="form-note">También puedes escribirnos a <strong>uehijosdeluz@gmail.com</strong> o por WhatsApp.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <div class="admissions-card">
+                                <form id="admission-form" onsubmit="return handleAdmissionSubmit(event)">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="form-label">Nombre completo</label>
+                                            <input class="form-input" type="text" id="a-name" name="name" required>
+                                        </div>
+                                        <div>
+                                            <label class="form-label">Teléfono / WhatsApp</label>
+                                            <input class="form-input" type="tel" id="a-phone" name="phone" required>
+                                        </div>
+                                        <div>
+                                            <label class="form-label">Correo electrónico</label>
+                                            <input class="form-input" type="email" id="a-email" name="email" required>
+                                        </div>
+                                        <div>
+                                            <label class="form-label">Nivel de interés</label>
+                                            <select id="a-level" class="form-select" name="level">
+                                                <option>Primaria</option>
+                                                <option>Bachillerato</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <label class="form-label">Mensaje / Consulta</label>
+                                        <textarea id="a-message" class="form-textarea" name="message" placeholder="Escribe aquí tu consulta" required></textarea>
+                                    </div>
+
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <button type="submit" class="admit-cta">Enviar solicitud</button>
+                                        <button type="reset" class="cta-outline">Limpiar</button>
+                                    </div>
+                                    <p id="admission-feedback" class="form-note mt-3" style="display:none;color:green;"></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
     <main>
         <!-- Hero Section -->
         <section id="inicio" class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-white text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 59, 109, 0.7), rgba(0, 59, 109, 0.7)), url('https://placehold.co/1920x1080/003B6D/FFFFFF?text=Bienvenidos');">
