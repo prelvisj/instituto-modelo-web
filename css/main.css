@@ -175,3 +175,12 @@ html {
 @media (max-width: 640px) {
     .hero-heading { font-size: 1.7rem; }
 }
+
+/* Floating WhatsApp button visibility */
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 9999;
+    box-shadow: 0 8px 24px rgba(2,6,23,0.18);
+}
