@@ -85,7 +85,7 @@ html {
 
 /* Hero personalizado con imagen de alta calidad y marca de agua del logo */
 .hero-bg {
-    background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
+    background-image: url('../img/hero-bg.jpg');
     background-size: cover;
     background-position: center 35%;
     position: relative;
